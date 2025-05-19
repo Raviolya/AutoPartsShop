@@ -30,18 +30,19 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.Statistica = new System.Windows.Forms.Button();
+            this.SupplierSale = new System.Windows.Forms.Button();
+            this.RemoveSale = new System.Windows.Forms.Button();
+            this.EditSale = new System.Windows.Forms.Button();
+            this.ProductCount = new System.Windows.Forms.NumericUpDown();
             this.ProductsComboBox = new System.Windows.Forms.ComboBox();
             this.AddSale = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ProductCount = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.dataSales = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.SupplierSale = new System.Windows.Forms.Button();
-            this.RemoveSale = new System.Windows.Forms.Button();
-            this.EditSale = new System.Windows.Forms.Button();
-            this.Statistica = new System.Windows.Forms.Button();
+            this.back = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductCount)).BeginInit();
@@ -74,6 +75,69 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1543, 212);
             this.panel4.TabIndex = 6;
+            // 
+            // Statistica
+            // 
+            this.Statistica.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.Statistica.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Statistica.Location = new System.Drawing.Point(494, 40);
+            this.Statistica.Name = "Statistica";
+            this.Statistica.Size = new System.Drawing.Size(1037, 50);
+            this.Statistica.TabIndex = 18;
+            this.Statistica.Text = "Отобразить подробный отчёт о продажах";
+            this.Statistica.UseVisualStyleBackColor = false;
+            // 
+            // SupplierSale
+            // 
+            this.SupplierSale.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.SupplierSale.Location = new System.Drawing.Point(1307, 136);
+            this.SupplierSale.Name = "SupplierSale";
+            this.SupplierSale.Size = new System.Drawing.Size(224, 50);
+            this.SupplierSale.TabIndex = 17;
+            this.SupplierSale.Text = "Сохранить";
+            this.SupplierSale.UseVisualStyleBackColor = false;
+            // 
+            // RemoveSale
+            // 
+            this.RemoveSale.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.RemoveSale.Location = new System.Drawing.Point(1039, 136);
+            this.RemoveSale.Name = "RemoveSale";
+            this.RemoveSale.Size = new System.Drawing.Size(224, 50);
+            this.RemoveSale.TabIndex = 16;
+            this.RemoveSale.Text = "Удалить";
+            this.RemoveSale.UseVisualStyleBackColor = false;
+            // 
+            // EditSale
+            // 
+            this.EditSale.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.EditSale.Location = new System.Drawing.Point(782, 136);
+            this.EditSale.Name = "EditSale";
+            this.EditSale.Size = new System.Drawing.Size(224, 50);
+            this.EditSale.TabIndex = 15;
+            this.EditSale.Text = "Изменить";
+            this.EditSale.UseVisualStyleBackColor = false;
+            // 
+            // ProductCount
+            // 
+            this.ProductCount.Location = new System.Drawing.Point(143, 140);
+            this.ProductCount.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.ProductCount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.ProductCount.Name = "ProductCount";
+            this.ProductCount.Size = new System.Drawing.Size(227, 20);
+            this.ProductCount.TabIndex = 14;
+            this.ProductCount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // ProductsComboBox
             // 
@@ -113,28 +177,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Товар";
             // 
-            // ProductCount
-            // 
-            this.ProductCount.Location = new System.Drawing.Point(143, 140);
-            this.ProductCount.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.ProductCount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.ProductCount.Name = "ProductCount";
-            this.ProductCount.Size = new System.Drawing.Size(227, 20);
-            this.ProductCount.TabIndex = 14;
-            this.ProductCount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -163,56 +205,28 @@
             this.panel1.Size = new System.Drawing.Size(1543, 393);
             this.panel1.TabIndex = 2;
             // 
-            // SupplierSale
+            // back
             // 
-            this.SupplierSale.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.SupplierSale.Location = new System.Drawing.Point(1307, 136);
-            this.SupplierSale.Name = "SupplierSale";
-            this.SupplierSale.Size = new System.Drawing.Size(224, 50);
-            this.SupplierSale.TabIndex = 17;
-            this.SupplierSale.Text = "Сохранить";
-            this.SupplierSale.UseVisualStyleBackColor = false;
-            // 
-            // RemoveSale
-            // 
-            this.RemoveSale.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.RemoveSale.Location = new System.Drawing.Point(1039, 136);
-            this.RemoveSale.Name = "RemoveSale";
-            this.RemoveSale.Size = new System.Drawing.Size(224, 50);
-            this.RemoveSale.TabIndex = 16;
-            this.RemoveSale.Text = "Удалить";
-            this.RemoveSale.UseVisualStyleBackColor = false;
-            // 
-            // EditSale
-            // 
-            this.EditSale.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.EditSale.Location = new System.Drawing.Point(782, 136);
-            this.EditSale.Name = "EditSale";
-            this.EditSale.Size = new System.Drawing.Size(224, 50);
-            this.EditSale.TabIndex = 15;
-            this.EditSale.Text = "Изменить";
-            this.EditSale.UseVisualStyleBackColor = false;
-            // 
-            // Statistica
-            // 
-            this.Statistica.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.Statistica.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Statistica.Location = new System.Drawing.Point(494, 40);
-            this.Statistica.Name = "Statistica";
-            this.Statistica.Size = new System.Drawing.Size(1037, 50);
-            this.Statistica.TabIndex = 18;
-            this.Statistica.Text = "Отобразить подробный отчёт о продажах";
-            this.Statistica.UseVisualStyleBackColor = false;
+            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.back.Location = new System.Drawing.Point(12, 6);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(224, 26);
+            this.back.TabIndex = 10;
+            this.back.Text = "Главная";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // SalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1543, 630);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "SalesForm";
             this.Text = "SalesForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SalesForm_FormClosed);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -240,5 +254,6 @@
         private System.Windows.Forms.Button RemoveSale;
         private System.Windows.Forms.Button EditSale;
         private System.Windows.Forms.Button Statistica;
+        private System.Windows.Forms.Button back;
     }
 }

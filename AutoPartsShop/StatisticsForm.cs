@@ -12,9 +12,15 @@ namespace AutoPartsShop
 {
     public partial class StatisticsForm : Form
     {
+        public MainForm MainForm { get; set; } // Свойство для хранения MainForm
         public StatisticsForm()
         {
             InitializeComponent();
+        }
+
+        private void StatisticsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

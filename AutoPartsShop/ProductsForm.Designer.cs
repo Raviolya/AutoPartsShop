@@ -29,25 +29,27 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ProductName = new System.Windows.Forms.TextBox();
-            this.AddProduct = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.dataProducts = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.ProductSave = new System.Windows.Forms.Button();
             this.RemoveProduct = new System.Windows.Forms.Button();
             this.EditProduct = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.AddProduct = new System.Windows.Forms.Button();
+            this.ProductName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.back = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel1.Controls.Add(this.back);
             this.panel1.Controls.Add(this.dataProducts);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -55,6 +57,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1540, 457);
             this.panel1.TabIndex = 0;
+            // 
+            // dataProducts
+            // 
+            this.dataProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataProducts.Location = new System.Drawing.Point(0, 41);
+            this.dataProducts.Name = "dataProducts";
+            this.dataProducts.Size = new System.Drawing.Size(1540, 416);
+            this.dataProducts.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(641, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(207, 23);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Номенклатура деталей";
             // 
             // panel2
             // 
@@ -72,68 +92,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1540, 172);
             this.panel2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(38, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Наименование";
-            // 
-            // ProductName
-            // 
-            this.ProductName.Location = new System.Drawing.Point(175, 28);
-            this.ProductName.Name = "ProductName";
-            this.ProductName.Size = new System.Drawing.Size(227, 20);
-            this.ProductName.TabIndex = 1;
-            // 
-            // AddProduct
-            // 
-            this.AddProduct.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.AddProduct.Location = new System.Drawing.Point(477, 108);
-            this.AddProduct.Name = "AddProduct";
-            this.AddProduct.Size = new System.Drawing.Size(224, 50);
-            this.AddProduct.TabIndex = 6;
-            this.AddProduct.Text = "Добавить";
-            this.AddProduct.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(641, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(207, 23);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Номенклатура деталей";
-            // 
-            // dataProducts
-            // 
-            this.dataProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataProducts.Location = new System.Drawing.Point(0, 41);
-            this.dataProducts.Name = "dataProducts";
-            this.dataProducts.Size = new System.Drawing.Size(1540, 416);
-            this.dataProducts.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(38, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 18);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Производитель";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(175, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 20);
-            this.textBox1.TabIndex = 8;
             // 
             // ProductSave
             // 
@@ -165,6 +123,61 @@
             this.EditProduct.Text = "Изменить";
             this.EditProduct.UseVisualStyleBackColor = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(175, 78);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(227, 20);
+            this.textBox1.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(38, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 18);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Производитель";
+            // 
+            // AddProduct
+            // 
+            this.AddProduct.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.AddProduct.Location = new System.Drawing.Point(285, 110);
+            this.AddProduct.Name = "AddProduct";
+            this.AddProduct.Size = new System.Drawing.Size(224, 50);
+            this.AddProduct.TabIndex = 6;
+            this.AddProduct.Text = "Добавить";
+            this.AddProduct.UseVisualStyleBackColor = false;
+            // 
+            // ProductName
+            // 
+            this.ProductName.Location = new System.Drawing.Point(175, 28);
+            this.ProductName.Name = "ProductName";
+            this.ProductName.Size = new System.Drawing.Size(227, 20);
+            this.ProductName.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(38, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Наименование";
+            // 
+            // back
+            // 
+            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.back.Location = new System.Drawing.Point(12, 6);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(224, 26);
+            this.back.TabIndex = 10;
+            this.back.Text = "Главная";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
+            // 
             // ProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,11 +187,12 @@
             this.Controls.Add(this.panel1);
             this.Name = "ProductsForm";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProductsForm_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,5 +211,6 @@
         private System.Windows.Forms.Button ProductSave;
         private System.Windows.Forms.Button RemoveProduct;
         private System.Windows.Forms.Button EditProduct;
+        private System.Windows.Forms.Button back;
     }
 }

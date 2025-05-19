@@ -30,12 +30,13 @@
         {
             this.EditDetail = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.SaveDetail = new System.Windows.Forms.Button();
+            this.RemoveDetail = new System.Windows.Forms.Button();
             this.AddDefect = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataWafehouse = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.SaveDetail = new System.Windows.Forms.Button();
-            this.RemoveDetail = new System.Windows.Forms.Button();
+            this.back = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataWafehouse)).BeginInit();
@@ -63,6 +64,26 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1539, 163);
             this.panel2.TabIndex = 7;
+            // 
+            // SaveDetail
+            // 
+            this.SaveDetail.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.SaveDetail.Location = new System.Drawing.Point(1268, 101);
+            this.SaveDetail.Name = "SaveDetail";
+            this.SaveDetail.Size = new System.Drawing.Size(224, 50);
+            this.SaveDetail.TabIndex = 11;
+            this.SaveDetail.Text = "Сохранить";
+            this.SaveDetail.UseVisualStyleBackColor = false;
+            // 
+            // RemoveDetail
+            // 
+            this.RemoveDetail.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.RemoveDetail.Location = new System.Drawing.Point(807, 101);
+            this.RemoveDetail.Name = "RemoveDetail";
+            this.RemoveDetail.Size = new System.Drawing.Size(224, 50);
+            this.RemoveDetail.TabIndex = 10;
+            this.RemoveDetail.Text = "Удалить";
+            this.RemoveDetail.UseVisualStyleBackColor = false;
             // 
             // AddDefect
             // 
@@ -103,35 +124,28 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Склад";
             // 
-            // SaveDetail
+            // back
             // 
-            this.SaveDetail.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.SaveDetail.Location = new System.Drawing.Point(1268, 101);
-            this.SaveDetail.Name = "SaveDetail";
-            this.SaveDetail.Size = new System.Drawing.Size(224, 50);
-            this.SaveDetail.TabIndex = 11;
-            this.SaveDetail.Text = "Сохранить";
-            this.SaveDetail.UseVisualStyleBackColor = false;
-            // 
-            // RemoveDetail
-            // 
-            this.RemoveDetail.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.RemoveDetail.Location = new System.Drawing.Point(807, 101);
-            this.RemoveDetail.Name = "RemoveDetail";
-            this.RemoveDetail.Size = new System.Drawing.Size(224, 50);
-            this.RemoveDetail.TabIndex = 10;
-            this.RemoveDetail.Text = "Удалить";
-            this.RemoveDetail.UseVisualStyleBackColor = false;
+            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.back.Location = new System.Drawing.Point(12, 6);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(224, 26);
+            this.back.TabIndex = 10;
+            this.back.Text = "Главная";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // WarehouseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1539, 620);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "WarehouseForm";
             this.Text = "WarehouseForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WarehouseForm_FormClosed);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -149,5 +163,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button SaveDetail;
         private System.Windows.Forms.Button RemoveDetail;
+        private System.Windows.Forms.Button back;
     }
 }

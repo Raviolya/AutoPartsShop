@@ -47,6 +47,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "StatisticsForm";
             this.Text = "StatisticsForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StatisticsForm_FormClosed);
             this.ResumeLayout(false);
 
         }

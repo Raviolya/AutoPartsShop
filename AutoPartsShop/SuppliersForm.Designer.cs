@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.SupplierSave = new System.Windows.Forms.Button();
+            this.RemoveSupplier = new System.Windows.Forms.Button();
+            this.EditSupplier = new System.Windows.Forms.Button();
+            this.SupplierCategories = new System.Windows.Forms.ComboBox();
+            this.SupplierContacts = new System.Windows.Forms.TextBox();
             this.AddSupplier = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SupplierName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.dataSuppliers = new System.Windows.Forms.DataGridView();
-            this.SupplierContacts = new System.Windows.Forms.TextBox();
-            this.SupplierCategories = new System.Windows.Forms.ComboBox();
-            this.SupplierSave = new System.Windows.Forms.Button();
-            this.RemoveSupplier = new System.Windows.Forms.Button();
-            this.EditSupplier = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.back = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSuppliers)).BeginInit();
@@ -65,6 +66,58 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1544, 173);
             this.panel2.TabIndex = 4;
+            // 
+            // SupplierSave
+            // 
+            this.SupplierSave.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.SupplierSave.Location = new System.Drawing.Point(1250, 108);
+            this.SupplierSave.Name = "SupplierSave";
+            this.SupplierSave.Size = new System.Drawing.Size(224, 50);
+            this.SupplierSave.TabIndex = 12;
+            this.SupplierSave.Text = "Сохранить";
+            this.SupplierSave.UseVisualStyleBackColor = false;
+            // 
+            // RemoveSupplier
+            // 
+            this.RemoveSupplier.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.RemoveSupplier.Location = new System.Drawing.Point(993, 108);
+            this.RemoveSupplier.Name = "RemoveSupplier";
+            this.RemoveSupplier.Size = new System.Drawing.Size(224, 50);
+            this.RemoveSupplier.TabIndex = 11;
+            this.RemoveSupplier.Text = "Удалить";
+            this.RemoveSupplier.UseVisualStyleBackColor = false;
+            // 
+            // EditSupplier
+            // 
+            this.EditSupplier.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.EditSupplier.Location = new System.Drawing.Point(743, 108);
+            this.EditSupplier.Name = "EditSupplier";
+            this.EditSupplier.Size = new System.Drawing.Size(224, 50);
+            this.EditSupplier.TabIndex = 10;
+            this.EditSupplier.Text = "Изменить";
+            this.EditSupplier.UseVisualStyleBackColor = false;
+            // 
+            // SupplierCategories
+            // 
+            this.SupplierCategories.FormattingEnabled = true;
+            this.SupplierCategories.Items.AddRange(new object[] {
+            "Фирма",
+            "Производитель",
+            "Дилер",
+            "Небольшое производство",
+            "Мелкий поставщик",
+            "Магазин"});
+            this.SupplierCategories.Location = new System.Drawing.Point(148, 70);
+            this.SupplierCategories.Name = "SupplierCategories";
+            this.SupplierCategories.Size = new System.Drawing.Size(227, 21);
+            this.SupplierCategories.TabIndex = 9;
+            // 
+            // SupplierContacts
+            // 
+            this.SupplierContacts.Location = new System.Drawing.Point(148, 121);
+            this.SupplierContacts.Name = "SupplierContacts";
+            this.SupplierContacts.Size = new System.Drawing.Size(227, 20);
+            this.SupplierContacts.TabIndex = 8;
             // 
             // AddSupplier
             // 
@@ -124,6 +177,14 @@
             this.panel1.Size = new System.Drawing.Size(1544, 457);
             this.panel1.TabIndex = 3;
             // 
+            // dataSuppliers
+            // 
+            this.dataSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataSuppliers.Location = new System.Drawing.Point(0, 35);
+            this.dataSuppliers.Name = "dataSuppliers";
+            this.dataSuppliers.Size = new System.Drawing.Size(1544, 422);
+            this.dataSuppliers.TabIndex = 1;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -134,75 +195,28 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Список поставщиков";
             // 
-            // dataSuppliers
+            // back
             // 
-            this.dataSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataSuppliers.Location = new System.Drawing.Point(0, 35);
-            this.dataSuppliers.Name = "dataSuppliers";
-            this.dataSuppliers.Size = new System.Drawing.Size(1544, 422);
-            this.dataSuppliers.TabIndex = 1;
-            // 
-            // SupplierContacts
-            // 
-            this.SupplierContacts.Location = new System.Drawing.Point(148, 121);
-            this.SupplierContacts.Name = "SupplierContacts";
-            this.SupplierContacts.Size = new System.Drawing.Size(227, 20);
-            this.SupplierContacts.TabIndex = 8;
-            // 
-            // SupplierCategories
-            // 
-            this.SupplierCategories.FormattingEnabled = true;
-            this.SupplierCategories.Items.AddRange(new object[] {
-            "Фирма",
-            "Производитель",
-            "Дилер",
-            "Небольшое производство",
-            "Мелкий поставщик",
-            "Магазин"});
-            this.SupplierCategories.Location = new System.Drawing.Point(148, 70);
-            this.SupplierCategories.Name = "SupplierCategories";
-            this.SupplierCategories.Size = new System.Drawing.Size(227, 21);
-            this.SupplierCategories.TabIndex = 9;
-            // 
-            // SupplierSave
-            // 
-            this.SupplierSave.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.SupplierSave.Location = new System.Drawing.Point(1250, 108);
-            this.SupplierSave.Name = "SupplierSave";
-            this.SupplierSave.Size = new System.Drawing.Size(224, 50);
-            this.SupplierSave.TabIndex = 12;
-            this.SupplierSave.Text = "Сохранить";
-            this.SupplierSave.UseVisualStyleBackColor = false;
-            // 
-            // RemoveSupplier
-            // 
-            this.RemoveSupplier.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.RemoveSupplier.Location = new System.Drawing.Point(993, 108);
-            this.RemoveSupplier.Name = "RemoveSupplier";
-            this.RemoveSupplier.Size = new System.Drawing.Size(224, 50);
-            this.RemoveSupplier.TabIndex = 11;
-            this.RemoveSupplier.Text = "Удалить";
-            this.RemoveSupplier.UseVisualStyleBackColor = false;
-            // 
-            // EditSupplier
-            // 
-            this.EditSupplier.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.EditSupplier.Location = new System.Drawing.Point(743, 108);
-            this.EditSupplier.Name = "EditSupplier";
-            this.EditSupplier.Size = new System.Drawing.Size(224, 50);
-            this.EditSupplier.TabIndex = 10;
-            this.EditSupplier.Text = "Изменить";
-            this.EditSupplier.UseVisualStyleBackColor = false;
+            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.back.Location = new System.Drawing.Point(12, 6);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(224, 26);
+            this.back.TabIndex = 10;
+            this.back.Text = "Главная";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // SuppliersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1544, 630);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "SuppliersForm";
             this.Text = "SuppliersForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SuppliersForm_FormClosed);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -227,5 +241,6 @@
         private System.Windows.Forms.Button SupplierSave;
         private System.Windows.Forms.Button RemoveSupplier;
         private System.Windows.Forms.Button EditSupplier;
+        private System.Windows.Forms.Button back;
     }
 }

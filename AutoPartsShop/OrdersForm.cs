@@ -12,9 +12,24 @@ namespace AutoPartsShop
 {
     public partial class OrdersForm : Form
     {
+        public MainForm MainForm { get; set; } // Свойство для хранения MainForm
         public OrdersForm()
         {
             InitializeComponent();
+        }
+
+        private void OrdersForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            if (MainForm != null)
+            {
+                MainForm.Show();
+                this.Hide();
+            }
         }
     }
 }
