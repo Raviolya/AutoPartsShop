@@ -3,44 +3,126 @@
   "WorkspaceRootPath": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|c:\\users\\computer\\desktop\\autopartsshop\\autopartsshop\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_COMPUTER_DESKTOP_AUTOPARTSSHOP_AUTOPARTSSHOP_DATABASE.MDF/True/SqlTable/dbo.Parts.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\suppliersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\suppliersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\customerrequestsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\customerrequestsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\warehouseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\warehouseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\statisticsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\statisticsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\salesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\salesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\productsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\productsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\productsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\productsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\ordersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\ordersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\repository\\partrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\repository\\partrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|AutoPartsShop||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\customerrequestsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\customerrequestsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\inventory.db||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:inventory.db||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\repository\\warehouserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\repository\\warehouserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\productsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\productsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\repository\\supplierrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\repository\\supplierrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\repository\\smallproductionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\repository\\smallproductionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\repository\\smallsupplierrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\repository\\smallsupplierrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\repository\\dealerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\repository\\dealerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\repository\\requestpartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\repository\\requestpartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\repository\\shoprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\repository\\shoprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\repository\\manufacturerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\repository\\manufacturerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\repository\\defectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\repository\\defectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\repository\\requestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\repository\\requestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\repository\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\repository\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\repository\\orderpartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\repository\\orderpartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\warehouseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\warehouseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\salesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\salesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\statisticsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\statisticsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\suppliersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\suppliersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\ordersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\ordersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\defectsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -75,18 +157,6 @@
       "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\customerrequestsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\productsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\productsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\productsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\productsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|C:\\Users\\Computer\\Desktop\\AutoPartsShop\\autopartsshop\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C28623F4-DA56-44E1-A8AA-31A4C603406B}|AutoPartsShop\\AutoPartsShop.csproj|solutionrelative:autopartsshop\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -107,37 +177,48 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DataBase.cs",
-              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\DataBase.cs",
-              "RelativeDocumentMoniker": "AutoPartsShop\\DataBase.cs",
-              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\DataBase.cs",
-              "RelativeToolTip": "AutoPartsShop\\DataBase.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAABEAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T09:07:21.707Z",
+              "Title": "dbo.Parts [\u0414\u0430\u043D\u043D\u044B\u0435]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_COMPUTER_DESKTOP_AUTOPARTSSHOP_AUTOPARTSSHOP_DATABASE.MDF/True/SqlTable/dbo.Parts.sql",
+              "ToolTip": "dbo.Parts [\u0414\u0430\u043D\u043D\u044B\u0435]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-25T19:37:24.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProductsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\ProductsForm.cs",
-              "RelativeDocumentMoniker": "AutoPartsShop\\ProductsForm.cs",
-              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\ProductsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "AutoPartsShop\\ProductsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\AppDbContext.cs",
+              "RelativeToolTip": "AutoPartsShop\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T08:13:27.061Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-05-20T18:49:21.689Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Models.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Models.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\Models.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Models.cs",
+              "RelativeToolTip": "AutoPartsShop\\Models.cs",
+              "ViewState": "AQIAAMgAAAAAAAAAAAAwwNgAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:47:35.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Program.cs",
               "RelativeDocumentMoniker": "AutoPartsShop\\Program.cs",
               "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Program.cs",
               "RelativeToolTip": "AutoPartsShop\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAvAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T12:48:05.704Z",
               "EditorCaption": ""
@@ -145,78 +226,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "SalesForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\SalesForm.cs",
-              "RelativeDocumentMoniker": "AutoPartsShop\\SalesForm.cs",
-              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\SalesForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "AutoPartsShop\\SalesForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T08:14:41.446Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StatisticsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\StatisticsForm.cs",
-              "RelativeDocumentMoniker": "AutoPartsShop\\StatisticsForm.cs",
-              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\StatisticsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "AutoPartsShop\\StatisticsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T08:15:46.749Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SuppliersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\SuppliersForm.cs",
-              "RelativeDocumentMoniker": "AutoPartsShop\\SuppliersForm.cs",
-              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\SuppliersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "AutoPartsShop\\SuppliersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T08:14:09.231Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WarehouseForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\WarehouseForm.cs",
-              "RelativeDocumentMoniker": "AutoPartsShop\\WarehouseForm.cs",
-              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\WarehouseForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "AutoPartsShop\\WarehouseForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T08:15:34.969Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CustomerRequestsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\CustomerRequestsForm.cs",
-              "RelativeDocumentMoniker": "AutoPartsShop\\CustomerRequestsForm.cs",
-              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\CustomerRequestsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "AutoPartsShop\\CustomerRequestsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T08:14:52.849Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "OrdersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\OrdersForm.cs",
-              "RelativeDocumentMoniker": "AutoPartsShop\\OrdersForm.cs",
-              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\OrdersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "AutoPartsShop\\OrdersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T08:14:23.906Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\MainForm.cs",
               "RelativeDocumentMoniker": "AutoPartsShop\\MainForm.cs",
@@ -228,7 +237,334 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\MainForm.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\MainForm.cs",
+              "RelativeToolTip": "AutoPartsShop\\MainForm.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAABIAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T07:54:02.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\ProductsForm.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\ProductsForm.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\ProductsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "AutoPartsShop\\ProductsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T08:13:27.061Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductsForm.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\ProductsForm.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\ProductsForm.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\ProductsForm.cs",
+              "RelativeToolTip": "AutoPartsShop\\ProductsForm.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABkAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T07:40:03.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\App.config",
+              "RelativeDocumentMoniker": "AutoPartsShop\\App.config",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\App.config",
+              "RelativeToolTip": "AutoPartsShop\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-05-24T14:01:33.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "AutoPartsShop",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\AutoPartsShop.csproj",
+              "RelativeDocumentMoniker": "AutoPartsShop\\AutoPartsShop.csproj",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\AutoPartsShop.csproj",
+              "RelativeToolTip": "AutoPartsShop\\AutoPartsShop.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-24T16:14:41.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CustomerRequestsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\CustomerRequestsForm.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\CustomerRequestsForm.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\CustomerRequestsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "AutoPartsShop\\CustomerRequestsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T08:14:52.849Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PartRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\PartRepository.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\Repository\\PartRepository.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\PartRepository.cs",
+              "RelativeToolTip": "AutoPartsShop\\Repository\\PartRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T14:26:36.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "inventory.db",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\inventory.db",
+              "RelativeDocumentMoniker": "inventory.db",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\inventory.db",
+              "RelativeToolTip": "inventory.db",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI8SURBVDhPdVNLT1NBGD3a23gJKaJUwsIEUaMoL2NsGyqxoCYEDRuKi0ZW3WHkL0D8BWqkJsLKQlsX9bGrNhqqRKRutCVp1BhFEiUxVyVx0Ud67/DN3EcvsZ7ck2/uN9/MnDkzswsGYrEY0xgD0zQwippGbabBzPEoORxb5Upl6Nrk5HsxiBeaWFhcZKqqWqxyVmuMx\u002BOsUCiwufn5P3dmI6eMYdhtRLEKh0pRVTlVQZpIkMPtduOs398sSdKSSBBqE5hqKJBovW1B/49Go0ilUihXys0iQZCMKPbMYQ7OrmaRza7C6/PBRxwbC4oe8gGzkYio4bApIPOM9v3oAppa23DpSgiyuw13781ZfRwa1ZqwJuAu86p8Lg//uQA6D7cjt/IKPUcOof/CMNbyearSp6HjEpHjHxMzmSU0NjTgUTKJUCiEJw\u002BT2OtyUT5DKkXJjtPbqYAQGBxEsVhEcHwciUQCl0dHsf5tA1W5CS\u002BWV1AqlcivOlvQZTH09vTi9fJLfF7fgGcggHcfvkBpbEc4HIay/zje5tb\u002Bp0A3kXPi6gSUzR94/CCON3Qaw8da8PzrX4x0HsD3n7/rm1i7BxSJHq8X16em4OnrRvrTL1zscOHpRwVn\u002Brrqmyjugf4JmjjdfQL7lALSz9Locm7hYGuL5ReHTUFNlgAVcVV7ZBlDA/0IjpzHyaMdkOnfXmvzgN9BenGSQ6dTgrMORa1tC9ZzvnnrNm2NjKROvjI/KhGNnFiA2vozZ7gxM01jgW0oG0\u002BFgH6cagAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-05-25T12:40:52.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SupplierRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\SupplierRepository.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\Repository\\SupplierRepository.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\SupplierRepository.cs",
+              "RelativeToolTip": "AutoPartsShop\\Repository\\SupplierRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T15:17:52.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "WarehouseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\WarehouseRepository.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\Repository\\WarehouseRepository.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\WarehouseRepository.cs",
+              "RelativeToolTip": "AutoPartsShop\\Repository\\WarehouseRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T14:45:18.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProductsForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\ProductsForm.Designer.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\ProductsForm.Designer.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\ProductsForm.Designer.cs",
+              "RelativeToolTip": "AutoPartsShop\\ProductsForm.Designer.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAlwMwAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T08:27:28.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SmallSupplierRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\SmallSupplierRepository.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\Repository\\SmallSupplierRepository.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\SmallSupplierRepository.cs",
+              "RelativeToolTip": "AutoPartsShop\\Repository\\SmallSupplierRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T15:22:20.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SmallProductionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\SmallProductionRepository.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\Repository\\SmallProductionRepository.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\SmallProductionRepository.cs",
+              "RelativeToolTip": "AutoPartsShop\\Repository\\SmallProductionRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T15:23:10.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DealerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\DealerRepository.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\Repository\\DealerRepository.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\DealerRepository.cs",
+              "RelativeToolTip": "AutoPartsShop\\Repository\\DealerRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T15:20:45.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "RequestPartRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\RequestPartRepository.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\Repository\\RequestPartRepository.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\RequestPartRepository.cs",
+              "RelativeToolTip": "AutoPartsShop\\Repository\\RequestPartRepository.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAEwBcAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T15:18:48.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ShopRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\ShopRepository.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\Repository\\ShopRepository.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\ShopRepository.cs",
+              "RelativeToolTip": "AutoPartsShop\\Repository\\ShopRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T15:20:07.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ManufacturerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\ManufacturerRepository.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\Repository\\ManufacturerRepository.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\ManufacturerRepository.cs",
+              "RelativeToolTip": "AutoPartsShop\\Repository\\ManufacturerRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T15:19:27.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DefectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\DefectRepository.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\Repository\\DefectRepository.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\DefectRepository.cs",
+              "RelativeToolTip": "AutoPartsShop\\Repository\\DefectRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T15:17:13.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "RequestRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\RequestRepository.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\Repository\\RequestRepository.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\RequestRepository.cs",
+              "RelativeToolTip": "AutoPartsShop\\Repository\\RequestRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T15:15:52.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "OrderPartRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\OrderPartRepository.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\Repository\\OrderPartRepository.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\OrderPartRepository.cs",
+              "RelativeToolTip": "AutoPartsShop\\Repository\\OrderPartRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T15:14:10.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SalesForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\SalesForm.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\SalesForm.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\SalesForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "AutoPartsShop\\SalesForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T08:14:41.446Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "WarehouseForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\WarehouseForm.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\WarehouseForm.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\WarehouseForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "AutoPartsShop\\WarehouseForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T08:15:34.969Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\Repository\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\Repository\\OrderRepository.cs",
+              "RelativeToolTip": "AutoPartsShop\\Repository\\OrderRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T14:27:34.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "StatisticsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\StatisticsForm.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\StatisticsForm.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\StatisticsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "AutoPartsShop\\StatisticsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T08:15:46.749Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "SuppliersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\SuppliersForm.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\SuppliersForm.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\SuppliersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "AutoPartsShop\\SuppliersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T08:14:09.231Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "OrdersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\OrdersForm.cs",
+              "RelativeDocumentMoniker": "AutoPartsShop\\OrdersForm.cs",
+              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\OrdersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "AutoPartsShop\\OrdersForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T08:14:23.906Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "DefectsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\DefectsForm.cs",
               "RelativeDocumentMoniker": "AutoPartsShop\\DefectsForm.cs",
@@ -240,7 +576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 32,
               "Title": "OrdersForm.cs",
               "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\OrdersForm.cs",
               "RelativeDocumentMoniker": "AutoPartsShop\\OrdersForm.cs",
@@ -253,7 +589,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 33,
               "Title": "StatisticsForm.cs",
               "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\StatisticsForm.cs",
               "RelativeDocumentMoniker": "AutoPartsShop\\StatisticsForm.cs",
@@ -266,7 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 34,
               "Title": "WarehouseForm.cs",
               "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\WarehouseForm.cs",
               "RelativeDocumentMoniker": "AutoPartsShop\\WarehouseForm.cs",
@@ -279,7 +615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 36,
               "Title": "SalesForm.cs",
               "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\SalesForm.cs",
               "RelativeDocumentMoniker": "AutoPartsShop\\SalesForm.cs",
@@ -292,7 +628,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 37,
               "Title": "DefectsForm.cs",
               "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\DefectsForm.cs",
               "RelativeDocumentMoniker": "AutoPartsShop\\DefectsForm.cs",
@@ -305,7 +641,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 38,
               "Title": "CustomerRequestsForm.cs",
               "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\CustomerRequestsForm.cs",
               "RelativeDocumentMoniker": "AutoPartsShop\\CustomerRequestsForm.cs",
@@ -318,20 +654,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ProductsForm.cs",
-              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\ProductsForm.cs",
-              "RelativeDocumentMoniker": "AutoPartsShop\\ProductsForm.cs",
-              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\ProductsForm.cs",
-              "RelativeToolTip": "AutoPartsShop\\ProductsForm.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAvwB4AAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T07:40:03.309Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 35,
               "Title": "SuppliersForm.cs",
               "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\SuppliersForm.cs",
               "RelativeDocumentMoniker": "AutoPartsShop\\SuppliersForm.cs",
@@ -344,20 +667,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\MainForm.cs",
-              "RelativeDocumentMoniker": "AutoPartsShop\\MainForm.cs",
-              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\MainForm.cs",
-              "RelativeToolTip": "AutoPartsShop\\MainForm.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAAACYAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T07:54:02.331Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 39,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "AutoPartsShop\\MainForm.Designer.cs",
@@ -370,20 +680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ProductsForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\ProductsForm.Designer.cs",
-              "RelativeDocumentMoniker": "AutoPartsShop\\ProductsForm.Designer.cs",
-              "ToolTip": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\ProductsForm.Designer.cs",
-              "RelativeToolTip": "AutoPartsShop\\ProductsForm.Designer.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAtwMsAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T08:27:28.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 40,
               "Title": "CustomerRequestsForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Computer\\Desktop\\AutoPartsShop\\AutoPartsShop\\CustomerRequestsForm.Designer.cs",
               "RelativeDocumentMoniker": "AutoPartsShop\\CustomerRequestsForm.Designer.cs",

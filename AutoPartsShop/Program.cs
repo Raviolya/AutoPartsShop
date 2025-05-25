@@ -1,23 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace AutoPartsShop
 {
-    internal static class Program
+    static class Program
     {
-        /// <summary>
-        /// Главная точка входа для приложения.
-        /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            MainForm mainForm = new MainForm();
-            Application.Run(mainForm);
+
+            try
+            {
+                using (var context = new AppDbContext())
+                {
+                    context.Database.CreateIfNotExists();
+                }
+                Application.Run(new MainForm());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка: {ex.Message}\n\nВнутреннее исключение: {ex.InnerException?.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

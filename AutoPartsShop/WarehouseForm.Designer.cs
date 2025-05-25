@@ -37,6 +37,7 @@
             this.dataWafehouse = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.back = new System.Windows.Forms.Button();
+            this.AddOnWarehouse = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataWafehouse)).BeginInit();
@@ -45,7 +46,7 @@
             // EditDetail
             // 
             this.EditDetail.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.EditDetail.Location = new System.Drawing.Point(395, 101);
+            this.EditDetail.Location = new System.Drawing.Point(649, 101);
             this.EditDetail.Name = "EditDetail";
             this.EditDetail.Size = new System.Drawing.Size(224, 50);
             this.EditDetail.TabIndex = 7;
@@ -55,6 +56,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Info;
+            this.panel2.Controls.Add(this.AddOnWarehouse);
             this.panel2.Controls.Add(this.SaveDetail);
             this.panel2.Controls.Add(this.RemoveDetail);
             this.panel2.Controls.Add(this.AddDefect);
@@ -78,7 +80,7 @@
             // RemoveDetail
             // 
             this.RemoveDetail.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.RemoveDetail.Location = new System.Drawing.Point(807, 101);
+            this.RemoveDetail.Location = new System.Drawing.Point(950, 101);
             this.RemoveDetail.Name = "RemoveDetail";
             this.RemoveDetail.Size = new System.Drawing.Size(224, 50);
             this.RemoveDetail.TabIndex = 10;
@@ -88,7 +90,7 @@
             // AddDefect
             // 
             this.AddDefect.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.AddDefect.Location = new System.Drawing.Point(12, 101);
+            this.AddDefect.Location = new System.Drawing.Point(335, 101);
             this.AddDefect.Name = "AddDefect";
             this.AddDefect.Size = new System.Drawing.Size(224, 50);
             this.AddDefect.TabIndex = 6;
@@ -135,6 +137,16 @@
             this.back.UseVisualStyleBackColor = true;
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
+            // AddOnWarehouse
+            // 
+            this.AddOnWarehouse.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.AddOnWarehouse.Location = new System.Drawing.Point(31, 101);
+            this.AddOnWarehouse.Name = "AddOnWarehouse";
+            this.AddOnWarehouse.Size = new System.Drawing.Size(224, 50);
+            this.AddOnWarehouse.TabIndex = 12;
+            this.AddOnWarehouse.Text = "Распределить детали по ячейкам";
+            this.AddOnWarehouse.UseVisualStyleBackColor = false;
+            // 
             // WarehouseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,5 +176,6 @@
         private System.Windows.Forms.Button SaveDetail;
         private System.Windows.Forms.Button RemoveDetail;
         private System.Windows.Forms.Button back;
+        private System.Windows.Forms.Button AddOnWarehouse;
     }
 }

@@ -7,12 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 
 namespace AutoPartsShop
 {
     public partial class MainForm : Form
     {
+        public SqlConnection sqlConnection = null;
+
         ProductsForm productForm = new ProductsForm();
         CustomerRequestsForm CustomerRForm = new CustomerRequestsForm();
         DefectsForm DefectsForm = new DefectsForm();
@@ -24,6 +29,17 @@ namespace AutoPartsShop
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["Inventory"].ConnectionString); // подключение к БД
+
+            sqlConnection.Open();
+            if (sqlConnection.State == ConnectionState.Open)
+            {
+                MessageBox.Show("Подключение установлено");
+            }
         }
 
         private void button_ProductsForm_Click(object sender, EventArgs e)
@@ -81,5 +97,7 @@ namespace AutoPartsShop
             StatisticsForm.Show();
             this.Hide();
         }
+
+        
     }
 }

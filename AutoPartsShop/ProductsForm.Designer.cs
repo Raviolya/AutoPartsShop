@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.back = new System.Windows.Forms.Button();
             this.dataProducts = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ProductSave = new System.Windows.Forms.Button();
             this.RemoveProduct = new System.Windows.Forms.Button();
             this.EditProduct = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.AddProduct = new System.Windows.Forms.Button();
             this.ProductName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.back = new System.Windows.Forms.Button();
+            this.salePrice = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.salePrice)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,6 +58,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1540, 457);
             this.panel1.TabIndex = 0;
+            // 
+            // back
+            // 
+            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.back.Location = new System.Drawing.Point(12, 6);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(224, 26);
+            this.back.TabIndex = 10;
+            this.back.Text = "Главная";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // dataProducts
             // 
@@ -79,10 +91,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Info;
+            this.panel2.Controls.Add(this.salePrice);
             this.panel2.Controls.Add(this.ProductSave);
             this.panel2.Controls.Add(this.RemoveProduct);
             this.panel2.Controls.Add(this.EditProduct);
-            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.AddProduct);
             this.panel2.Controls.Add(this.ProductName);
@@ -123,22 +135,15 @@
             this.EditProduct.Text = "Изменить";
             this.EditProduct.UseVisualStyleBackColor = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(175, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 20);
-            this.textBox1.TabIndex = 8;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(38, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 18);
+            this.label2.Size = new System.Drawing.Size(108, 18);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Производитель";
+            this.label2.Text = "Цена продажи";
             // 
             // AddProduct
             // 
@@ -149,6 +154,7 @@
             this.AddProduct.TabIndex = 6;
             this.AddProduct.Text = "Добавить";
             this.AddProduct.UseVisualStyleBackColor = false;
+            this.AddProduct.Click += new System.EventHandler(this.AddProduct_Click);
             // 
             // ProductName
             // 
@@ -167,16 +173,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Наименование";
             // 
-            // back
+            // salePrice
             // 
-            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.back.Location = new System.Drawing.Point(12, 6);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(224, 26);
-            this.back.TabIndex = 10;
-            this.back.Text = "Главная";
-            this.back.UseVisualStyleBackColor = true;
-            this.back.Click += new System.EventHandler(this.back_Click);
+            this.salePrice.Location = new System.Drawing.Point(175, 77);
+            this.salePrice.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.salePrice.Name = "salePrice";
+            this.salePrice.Size = new System.Drawing.Size(227, 20);
+            this.salePrice.TabIndex = 13;
             // 
             // ProductsForm
             // 
@@ -193,6 +200,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.salePrice)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -201,16 +209,18 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+#pragma warning disable CS0108 // Член скрывает унаследованный член: отсутствует новое ключевое слово
         private System.Windows.Forms.TextBox ProductName;
+#pragma warning restore CS0108 // Член скрывает унаследованный член: отсутствует новое ключевое слово
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button AddProduct;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataProducts;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ProductSave;
         private System.Windows.Forms.Button RemoveProduct;
         private System.Windows.Forms.Button EditProduct;
         private System.Windows.Forms.Button back;
+        private System.Windows.Forms.NumericUpDown salePrice;
     }
 }
