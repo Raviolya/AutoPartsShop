@@ -14,19 +14,21 @@ namespace AutoPartsShop
 {
     public partial class ProductsForm : Form
     {
-        private readonly PartRepository _partRepository; // паттерн репозиторий для управления таблицей Детали
         public MainForm MainForm { get; set; } // Свойство для хранения MainForm
         public ProductsForm()
         {
             InitializeComponent();
-            _partRepository = new PartRepository();
-            LoadParts();
         }
 
-        private void LoadParts()
+        public void LoadParts()
         {
-            var parts = _partRepository.GetAll();
-            dataProducts.DataSource = parts;
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(
+                "SELECT * FROM Parts", MainForm.sqlConnection);
+
+            DataSet ds = new DataSet();
+
+            dataAdapter.Fill(ds);
+            dataProducts.DataSource = ds.Tables[0];
         }
 
         private void ProductsForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -47,9 +49,16 @@ namespace AutoPartsShop
         {
             string Name = ProductName.Text;
             decimal SalePrice = salePrice.Value;
-            SqlCommand command = new SqlCommand($"INSERT INTO [Parts] (Name, SalePrice) VALUES (N'{Name}', '{SalePrice}')", MainForm.sqlConnection);
+            SqlCommand command = new SqlCommand(
+                $"INSERT INTO [Parts] (Name, SalePrice) VALUES (N'{Name}', '{SalePrice}')",
+                MainForm.sqlConnection);
 
-            MessageBox.Show(command.ExecuteNonQuery().ToString());  
+            command.ExecuteNonQuery();
+        }
+
+        private void EditProduct_Click(object sender, EventArgs e)
+        {
+            LoadParts();
         }
     }
 }

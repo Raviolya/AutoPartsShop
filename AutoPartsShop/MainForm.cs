@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 
 
@@ -45,6 +44,7 @@ namespace AutoPartsShop
         private void button_ProductsForm_Click(object sender, EventArgs e)
         {
             productForm.MainForm = this; // Устанавливаем свойство
+            productForm.LoadParts();
             productForm.Show();
             this.Hide();
         }
@@ -59,6 +59,10 @@ namespace AutoPartsShop
         private void button_OrdersForm_Click(object sender, EventArgs e)
         {
             OrdersForm.MainForm = this; // Устанавливаем свойство
+            OrdersForm.LoadOrders1();
+            OrdersForm.LoadOrders2();
+            OrdersForm.LoadProductsComboBox();
+            OrdersForm.LoadSupplierComboBox();
             OrdersForm.Show();
             this.Hide();
         }
