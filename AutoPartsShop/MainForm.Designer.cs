@@ -61,7 +61,7 @@
             // button_StatisticsForm
             // 
             this.button_StatisticsForm.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button_StatisticsForm.Location = new System.Drawing.Point(1254, 490);
+            this.button_StatisticsForm.Location = new System.Drawing.Point(924, 490);
             this.button_StatisticsForm.Name = "button_StatisticsForm";
             this.button_StatisticsForm.Size = new System.Drawing.Size(192, 84);
             this.button_StatisticsForm.TabIndex = 9;
@@ -72,7 +72,7 @@
             // button_WarehouseForm
             // 
             this.button_WarehouseForm.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button_WarehouseForm.Location = new System.Drawing.Point(704, 490);
+            this.button_WarehouseForm.Location = new System.Drawing.Point(514, 490);
             this.button_WarehouseForm.Name = "button_WarehouseForm";
             this.button_WarehouseForm.Size = new System.Drawing.Size(192, 84);
             this.button_WarehouseForm.TabIndex = 8;
@@ -84,7 +84,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(401, 48);
+            this.label1.Location = new System.Drawing.Point(245, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(745, 41);
             this.label1.TabIndex = 6;
@@ -115,7 +115,7 @@
             // button_CustomerRequestsForm
             // 
             this.button_CustomerRequestsForm.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button_CustomerRequestsForm.Location = new System.Drawing.Point(1254, 320);
+            this.button_CustomerRequestsForm.Location = new System.Drawing.Point(924, 320);
             this.button_CustomerRequestsForm.Name = "button_CustomerRequestsForm";
             this.button_CustomerRequestsForm.Size = new System.Drawing.Size(192, 84);
             this.button_CustomerRequestsForm.TabIndex = 3;
@@ -126,7 +126,7 @@
             // button_OrdersForm
             // 
             this.button_OrdersForm.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button_OrdersForm.Location = new System.Drawing.Point(1254, 155);
+            this.button_OrdersForm.Location = new System.Drawing.Point(924, 155);
             this.button_OrdersForm.Name = "button_OrdersForm";
             this.button_OrdersForm.Size = new System.Drawing.Size(192, 84);
             this.button_OrdersForm.TabIndex = 2;
@@ -137,7 +137,7 @@
             // button_SuppliersForm
             // 
             this.button_SuppliersForm.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button_SuppliersForm.Location = new System.Drawing.Point(704, 155);
+            this.button_SuppliersForm.Location = new System.Drawing.Point(514, 155);
             this.button_SuppliersForm.Name = "button_SuppliersForm";
             this.button_SuppliersForm.Size = new System.Drawing.Size(192, 84);
             this.button_SuppliersForm.TabIndex = 1;
@@ -160,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1538, 628);
+            this.ClientSize = new System.Drawing.Size(1219, 622);
             this.Controls.Add(this.MainPanel);
             this.Name = "MainForm";
             this.Text = "MainForm";

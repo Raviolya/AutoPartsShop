@@ -52,6 +52,7 @@ namespace AutoPartsShop
         private void button_SuppliersForm_Click(object sender, EventArgs e)
         {
             SuppliersForm.MainForm = this; // Устанавливаем свойство
+            SuppliersForm.LoadSupplier();
             SuppliersForm.Show();
             this.Hide();
         }

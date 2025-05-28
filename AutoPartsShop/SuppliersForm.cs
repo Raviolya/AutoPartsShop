@@ -36,10 +36,57 @@ namespace AutoPartsShop
             }
         }
 
+        public void LoadSupplier()
+        {
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(
+                "SELECT * FROM Suppliers", MainForm.sqlConnection);
+
+            DataSet ds = new DataSet();
+
+            dataAdapter.Fill(ds);
+            dataSuppliers.DataSource = ds.Tables[0];
+        }
+
+        public void LoadSupplier2()
+        {
+            string category = Convert.ToString(comboBoxCat.SelectedItem);
+            SqlDataAdapter dataAdapter = null;
+            switch (category)
+            {
+                case "Производитель":
+                    dataAdapter = new SqlDataAdapter(
+                        "SELECT * FROM Manufacturers", MainForm.sqlConnection);
+                    break;
+                case "Дилер":
+                    dataAdapter = new SqlDataAdapter(
+                        "SELECT * FROM Dealers", MainForm.sqlConnection);
+                    break;
+                case "Мелкий поставщик":
+                    dataAdapter = new SqlDataAdapter(
+                        "SELECT * FROM SmallSuppliers", MainForm.sqlConnection);
+                    break;
+                case "Магазин":
+                    dataAdapter = new SqlDataAdapter(
+                        "SELECT * FROM Shops", MainForm.sqlConnection);
+                    break;
+                case "Небольшое производство":
+                    dataAdapter = new SqlDataAdapter(
+                        "SELECT * FROM SmallProductions", MainForm.sqlConnection);
+                    break;
+                default:
+                    return;
+            }
+
+            DataSet ds = new DataSet();
+
+            dataAdapter.Fill(ds);
+            dataSuppliers2.DataSource = ds.Tables[0];
+        }
+
         private void AddSupplier_Click(object sender, EventArgs e)
         {
             string category = Convert.ToString(SupplierCategories.SelectedItem);
-            string insertinto = "INSERT INTO Suppliers (Name, Country, ContactInfo, SupplierType) VALUES (@Name, @Country, @ContactInfo, @Type)";
+            string insertinto = "INSERT INTO Suppliers (Name, Country, ContactInfo, SupplierType) OUTPUT INSERTED.SupplierId VALUES (@Name, @Country, @ContactInfo, @Type)";
             switch (category)
                 {
                     case "Производитель":
@@ -58,7 +105,7 @@ namespace AutoPartsShop
 
                             int supplierId = Convert.ToInt32(command.ExecuteScalar());
 
-                            string insert = "INSERT INTO Manufacturers (SupplierId, WarrantyPeriod, ContractDetails) VALUES (@a, @b, N'@c')";
+                            string insert = "INSERT INTO Manufacturers (SupplierId, WarrantyPeriod, ContractDetails) VALUES (@a, @b, @c)";
                             using (SqlCommand com = new SqlCommand(insert, MainForm.sqlConnection))
                             {
                                 com.Parameters.AddWithValue("@a", supplierId);
@@ -66,6 +113,7 @@ namespace AutoPartsShop
                                 com.Parameters.AddWithValue("@c", contractDetails.Text);
 
                                 com.ExecuteNonQuery();
+                            MessageBox.Show("Данные добавлены");
                             }
                         }
 
@@ -88,7 +136,7 @@ namespace AutoPartsShop
 
                             int supplierId = Convert.ToInt32(command.ExecuteScalar());
 
-                            string insert = "INSERT INTO Dealers (SupplierId, WarrantyPeriod, ContractDetails, DiscountRate) VALUES (@a, @b, N'@c', d)";
+                            string insert = "INSERT INTO Dealers (SupplierId, WarrantyPeriod, ContractDetails, DiscountRate) VALUES (@a, @b, @c, @d)";
                             using (SqlCommand com = new SqlCommand(insert, MainForm.sqlConnection))
                             {
                                 com.Parameters.AddWithValue("@a", supplierId);
@@ -174,8 +222,11 @@ namespace AutoPartsShop
                         }
                     }
                     break;
-
+                default:
+                    MessageBox.Show("Выберите категорию");
+                    break;
             }
+            LoadSupplier();
         }
 
         private void SupplierCategories_SelectedIndexChanged(object sender, EventArgs e)
@@ -255,8 +306,20 @@ namespace AutoPartsShop
                     productionCapacity.Visible = true;
                     break;
                 default:
+                    MessageBox.Show("Выберите категорию");
                     break;
             }
+        }
+
+        private void EditSupplier_Click(object sender, EventArgs e)
+        {
+            LoadSupplier();
+            LoadSupplier2();
+        }
+
+        private void print_Click(object sender, EventArgs e)
+        {
+            LoadSupplier2();
         }
     }
 }

@@ -54,6 +54,7 @@ namespace AutoPartsShop
                 MainForm.sqlConnection);
 
             command.ExecuteNonQuery();
+            LoadParts();
         }
 
         private void EditProduct_Click(object sender, EventArgs e)

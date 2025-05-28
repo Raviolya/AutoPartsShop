@@ -11,6 +11,8 @@ using System.Windows.Forms;
 
 namespace AutoPartsShop
 {
+
+    
     public partial class OrdersForm : Form
     {
         public MainForm MainForm { get; set; } // Свойство для хранения MainForm
@@ -69,9 +71,12 @@ namespace AutoPartsShop
                         // Выполняем вставку в OrderParts
                         int rowsAffected = orderPartsCommand.ExecuteNonQuery();
                         MessageBox.Show($"Добавлено строк в OrderParts: {rowsAffected}");
+                        LoadOrders1();
+                        LoadOrders2();
                     }
                 }
             }
+            
         }
 
         public void LoadProductsComboBox ()
@@ -132,22 +137,123 @@ namespace AutoPartsShop
 
         private void editStatus_Click(object sender, EventArgs e)
         {
-            if (orderDataGrid.CurrentRow != null)
+            if (cell.Visible == false)
             {
-                int id = Convert.ToInt32(orderDataGrid.CurrentRow.Cells["OrderId"].Value);
-                string updateQuery = "UPDATE Orders SET Status = @Status WHERE OrderId = @OrderId";
-                using (SqlCommand command = new SqlCommand(updateQuery, MainForm.sqlConnection))
-                {
-                    command.Parameters.AddWithValue("@Status", "Выполнен");
-                    command.Parameters.AddWithValue("@OrderId", id);
-                    command.ExecuteNonQuery();
-                }
-                LoadOrders1();
+                label5.Visible = true;
+                cell.Visible = true;
+                MessageBox.Show("Выберите ячейку и снова кликните на кнопку");
             }
             else
             {
-                MessageBox.Show("Выберите строку");
+                label5.Visible = false;
+                cell.Visible = false;
+
+                if (orderDataGrid.CurrentRow == null)
+                {
+                    MessageBox.Show("Выберите строку в таблице.");
+                    return;
+                }
+
+                string partId = Convert.ToString(orderDataGrid.CurrentRow.Cells["Status"].Value);
+                int id = Convert.ToInt32(orderDataGrid.CurrentRow.Cells["OrderId"].Value);
+
+                if (partId == "Выполнен")
+                {
+                    MessageBox.Show("Заказ уже выполнен.");
+                    return;
+                }
+
+                try
+                {
+                    if (MainForm.sqlConnection.State != System.Data.ConnectionState.Open)
+                        MainForm.sqlConnection.Open();
+
+                    string updateQuery = "UPDATE Orders SET Status = @Status WHERE OrderId = @OrderId";
+                    using (SqlCommand command = new SqlCommand(updateQuery, MainForm.sqlConnection))
+                    {
+                        command.Parameters.AddWithValue("@Status", "Выполнен");
+                        command.Parameters.AddWithValue("@OrderId", id);
+                        int rowsAffected = command.ExecuteNonQuery();
+                        if (rowsAffected == 0)
+                            MessageBox.Show("Заказ не найден или не обновлён.");
+                    }
+
+                    LoadOrders1();
+
+
+
+                    string getPartId = "SELECT PartId, Count FROM OrderParts WHERE OrderId = @OrderId";
+                    List<OrderPartsItem> items = new List<OrderPartsItem>();
+                    using (SqlCommand cmd = new SqlCommand(getPartId, MainForm.sqlConnection))
+                    {
+                        cmd.Parameters.AddWithValue("@OrderId", id);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                int PartId = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
+                                int Count = reader.IsDBNull (1) ? 0 : reader.GetInt32(1);
+                                items.Add(new OrderPartsItem(PartId, Count));
+                            }
+                        }
+                    }
+
+                    if (items.Count == 0)
+                    {
+                        MessageBox.Show($"Нет записей в OrderParts для OrderId {id}.");
+                        return;
+                    }
+
+                  
+                    if (cell.Value == null || !int.TryParse(cell.Value.ToString(), out int currentCell))
+                    {
+                        MessageBox.Show("Некорректное значение ячейки.");
+                        return;
+                    }
+
+
+                    string addParts = "INSERT INTO Warehouse (PartId, Cell, IsSold) VALUES (@PartId, @Cell, 0)";
+                    int insertedCount = 0;
+                    foreach (OrderPartsItem value in items)
+                    {
+                        for (int i = 0; i < value.Count; i++)
+                        {
+                            using (SqlCommand cmd1 = new SqlCommand(addParts, MainForm.sqlConnection))
+                            {
+                                cmd1.Parameters.AddWithValue("@PartId", value.PartId);
+                                cmd1.Parameters.AddWithValue("@Cell", currentCell);
+                                int rowsAffected = cmd1.ExecuteNonQuery();
+                                insertedCount += rowsAffected;
+                            }
+                        }
+                    }
+
+                    if (insertedCount > 0)
+                        MessageBox.Show($"Успешно добавлено {insertedCount} записей в Warehouse.");
+                    else
+                        MessageBox.Show("Не удалось добавить записи в Warehouse.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка: {ex.Message}");
+                }
             }
+        }
+    }
+    public class OrderPartsItem
+    {
+        public int PartId { get; set; }
+        public int Count { get; set; }
+
+        public OrderPartsItem(int partId, int count)
+        {
+            PartId = partId;
+            Count = count;
+        }
+
+        public override string ToString()
+        {
+            return $"PartId: {PartId}, Count: {Count}";
         }
     }
 }

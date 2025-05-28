@@ -50,6 +50,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.orderDataGrid = new System.Windows.Forms.DataGridView();
             this.back = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cell = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -62,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.orderDataGrid2)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orderDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cell)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -198,7 +201,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1263, 541);
+            this.tabPage2.Size = new System.Drawing.Size(1264, 541);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Просмотр";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -216,16 +219,18 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1257, 535);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1258, 535);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.cell);
+            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.EditOrder);
             this.panel2.Controls.Add(this.editStatus);
             this.panel2.Location = new System.Drawing.Point(3, 484);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(490, 48);
+            this.panel2.Size = new System.Drawing.Size(1250, 48);
             this.panel2.TabIndex = 0;
             // 
             // EditOrder
@@ -304,6 +309,30 @@
             this.back.UseVisualStyleBackColor = true;
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(538, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(221, 20);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Выберите ячейку на складе";
+            this.label5.Visible = false;
+            // 
+            // cell
+            // 
+            this.cell.Location = new System.Drawing.Point(765, 17);
+            this.cell.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.cell.Name = "cell";
+            this.cell.Size = new System.Drawing.Size(120, 20);
+            this.cell.TabIndex = 27;
+            this.cell.Visible = false;
+            // 
             // OrdersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,11 +351,13 @@
             this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.orderDataGrid2)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.orderDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cell)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -355,5 +386,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView orderDataGrid2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.NumericUpDown cell;
+        private System.Windows.Forms.Label label5;
     }
 }
