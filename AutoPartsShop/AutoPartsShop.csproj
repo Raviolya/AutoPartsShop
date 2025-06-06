@@ -15,6 +15,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -27,7 +28,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -92,7 +92,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppDbContext.cs" />
     <Compile Include="CustomerRequestsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,9 +103,6 @@
     </Compile>
     <Compile Include="DefectsForm.Designer.cs">
       <DependentUpon>DefectsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Models.cs">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="OrdersForm.cs">
       <SubType>Form</SubType>
@@ -128,19 +124,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\DefectRepository.cs" />
-    <Compile Include="Repository\DealerRepository.cs" />
-    <Compile Include="Repository\ManufacturerRepository.cs" />
-    <Compile Include="Repository\OrderPartRepository.cs" />
-    <Compile Include="Repository\OrderRepository.cs" />
-    <Compile Include="Repository\PartRepository.cs" />
-    <Compile Include="Repository\RequestPartRepository.cs" />
-    <Compile Include="Repository\RequestRepository.cs" />
-    <Compile Include="Repository\ShopRepository.cs" />
-    <Compile Include="Repository\SmallProductionRepository.cs" />
-    <Compile Include="Repository\SmallSupplierRepository.cs" />
-    <Compile Include="Repository\SupplierRepository.cs" />
-    <Compile Include="Repository\WarehouseRepository.cs" />
     <Compile Include="SalesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,7 +184,6 @@
     <EmbeddedResource Include="WarehouseForm.resx">
       <DependentUpon>WarehouseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="inventory.db" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -217,12 +199,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database.mdf">
+    <Content Include="Database1.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Database_log.ldf">
+    <Content Include="Database1_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database.mdf</DependentUpon>
+      <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>

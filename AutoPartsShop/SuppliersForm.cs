@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO.Ports;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using System.IO;
 
 namespace AutoPartsShop
 {
     public partial class SuppliersForm : Form
     {
+        private string[] detailNames = null;
         public MainForm MainForm { get; set; } // Свойство для хранения MainForm
         public SuppliersForm()
         {
@@ -27,6 +20,9 @@ namespace AutoPartsShop
             Application.Exit();
         }
 
+
+
+
         private void back_Click(object sender, EventArgs e)
         {
             if (MainForm != null)
@@ -36,10 +32,60 @@ namespace AutoPartsShop
             }
         }
 
+
+        public void LoadCountriesToComboBox()
+        {
+            try
+            {
+                // Создаем SQL-запрос для извлечения стран
+                string query = "SELECT CountryID, Name FROM Country";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, MainForm.sqlConnection);
+
+                // Создаем DataTable для хранения данных
+                DataTable dt = new DataTable();
+                dataAdapter.Fill(dt);
+
+                // Устанавливаем источник данных для ComboBox
+                country.DataSource = dt;
+                country.DisplayMember = "Name"; // Поле, которое будет отображаться
+                country.ValueMember = "CountryID"; // Поле, которое будет использовано как значение
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка при загрузке стран: " + ex.Message);
+            }
+        }
+
+        public void LoadTypesToComboBox()
+        {
+            try
+            {
+                // Создаем SQL-запрос для извлечения стран
+                string query = "SELECT TypeID, Name FROM Type";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, MainForm.sqlConnection);
+
+                // Создаем DataTable для хранения данных
+                DataTable dt = new DataTable();
+                dataAdapter.Fill(dt);
+
+                // Устанавливаем источник данных для ComboBox
+                SupplierCategories.DataSource = dt;
+                SupplierCategories.DisplayMember = "Name"; // Поле, которое будет отображаться
+                SupplierCategories.ValueMember = "TypeID"; // Поле, которое будет использовано как значение
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка при загрузке типов: " + ex.Message);
+            }
+        }
+
         public void LoadSupplier()
         {
             SqlDataAdapter dataAdapter = new SqlDataAdapter(
-                "SELECT * FROM Suppliers", MainForm.sqlConnection);
+                "SELECT Supplier.Name AS Наименование, Country.Name AS Страна, Type.Name AS Тип, Supplier.NumberPhone AS 'Номер телефона', Supplier.WebSite AS WEBsite " +
+                "FROM Supplier " +
+                "JOIN Country ON Supplier.CountryID = Country.CountryID " +
+                "JOIN Type ON Supplier.TypeID = Type.TypeID", MainForm.sqlConnection);
 
             DataSet ds = new DataSet();
 
@@ -47,279 +93,117 @@ namespace AutoPartsShop
             dataSuppliers.DataSource = ds.Tables[0];
         }
 
-        public void LoadSupplier2()
-        {
-            string category = Convert.ToString(comboBoxCat.SelectedItem);
-            SqlDataAdapter dataAdapter = null;
-            switch (category)
-            {
-                case "Производитель":
-                    dataAdapter = new SqlDataAdapter(
-                        "SELECT * FROM Manufacturers", MainForm.sqlConnection);
-                    break;
-                case "Дилер":
-                    dataAdapter = new SqlDataAdapter(
-                        "SELECT * FROM Dealers", MainForm.sqlConnection);
-                    break;
-                case "Мелкий поставщик":
-                    dataAdapter = new SqlDataAdapter(
-                        "SELECT * FROM SmallSuppliers", MainForm.sqlConnection);
-                    break;
-                case "Магазин":
-                    dataAdapter = new SqlDataAdapter(
-                        "SELECT * FROM Shops", MainForm.sqlConnection);
-                    break;
-                case "Небольшое производство":
-                    dataAdapter = new SqlDataAdapter(
-                        "SELECT * FROM SmallProductions", MainForm.sqlConnection);
-                    break;
-                default:
-                    return;
-            }
 
-            DataSet ds = new DataSet();
-
-            dataAdapter.Fill(ds);
-            dataSuppliers2.DataSource = ds.Tables[0];
-        }
 
         private void AddSupplier_Click(object sender, EventArgs e)
         {
             string category = Convert.ToString(SupplierCategories.SelectedItem);
-            string insertinto = "INSERT INTO Suppliers (Name, Country, ContactInfo, SupplierType) OUTPUT INSERTED.SupplierId VALUES (@Name, @Country, @ContactInfo, @Type)";
-            switch (category)
+            string insertinto = "INSERT INTO Supplier (Name, TypeID, CountryID, NumberPhone, WebSite) OUTPUT INSERTED.SupplierID VALUES (@Name, @TypeID, @CountryID, @NumberPhone, @WebSite)";
+            string sName = SupplierName.Text, sPhone = SupplierContacts.Text, sWeb = webSite.Text;
+            int sCountry = (int)country.SelectedValue, sType = (int)SupplierCategories.SelectedValue;
+            if (this.detailNames != null && sName != "" && sPhone != "" && sWeb != "")
+            {
+                using (SqlCommand command = new SqlCommand(insertinto, MainForm.sqlConnection))
                 {
-                    case "Производитель":
-                        if (contractDetails.Text == null || contractDetails.Text == "")
-                        {
-                            MessageBox.Show("Заполните поля");
-                            return;
-                        }
-                        
-                        using (SqlCommand command = new SqlCommand(insertinto, MainForm.sqlConnection))
-                        {
-                            command.Parameters.AddWithValue("@Name", SupplierName.Text);
-                            command.Parameters.AddWithValue("@Country", country.Text);
-                            command.Parameters.AddWithValue("@ContactInfo", SupplierContacts.Text);
-                            command.Parameters.AddWithValue("@Type", category);
+                    command.Parameters.AddWithValue("@Name", sName);
+                    command.Parameters.AddWithValue("@CountryID", sCountry);
+                    command.Parameters.AddWithValue("@NumberPhone", sPhone);
+                    command.Parameters.AddWithValue("@TypeID", sType);
+                    command.Parameters.AddWithValue("@WebSite", sWeb);
+                    int supplierID = (int)command.ExecuteScalar();
+                    
 
-                            int supplierId = Convert.ToInt32(command.ExecuteScalar());
-
-                            string insert = "INSERT INTO Manufacturers (SupplierId, WarrantyPeriod, ContractDetails) VALUES (@a, @b, @c)";
-                            using (SqlCommand com = new SqlCommand(insert, MainForm.sqlConnection))
-                            {
-                                com.Parameters.AddWithValue("@a", supplierId);
-                                com.Parameters.AddWithValue("@b", warrantyPeriod.Value);
-                                com.Parameters.AddWithValue("@c", contractDetails.Text);
-
-                                com.ExecuteNonQuery();
-                            MessageBox.Show("Данные добавлены");
-                            }
-                        }
-
-                        break;
-
-
-                    case "Дилер":
-
-                        if (contractDetails.Text == null || contractDetails.Text == "")
-                        {
-                            MessageBox.Show("Заполните поля");
-                            return;
-                        }
-                        using (SqlCommand command = new SqlCommand(insertinto, MainForm.sqlConnection))
-                        {
-                            command.Parameters.AddWithValue("@Name", SupplierName.Text);
-                            command.Parameters.AddWithValue("@Country", country.Text);
-                            command.Parameters.AddWithValue("@ContactInfo", SupplierContacts.Text);
-                            command.Parameters.AddWithValue("@Type", category);
-
-                            int supplierId = Convert.ToInt32(command.ExecuteScalar());
-
-                            string insert = "INSERT INTO Dealers (SupplierId, WarrantyPeriod, ContractDetails, DiscountRate) VALUES (@a, @b, @c, @d)";
-                            using (SqlCommand com = new SqlCommand(insert, MainForm.sqlConnection))
-                            {
-                                com.Parameters.AddWithValue("@a", supplierId);
-                                com.Parameters.AddWithValue("@b", warrantyPeriod.Value);
-                                com.Parameters.AddWithValue("@c", contractDetails.Text);
-                                com.Parameters.AddWithValue("@d", discountRate.Value);
-
-                                com.ExecuteNonQuery();
-                            }
-                        }
-                        break;
-
-                case "Мелкий поставщик":
-                    if (specialization.Text == null || specialization.Text == "")
+                    foreach (string detailName in this.detailNames)
                     {
-                        MessageBox.Show("Заполните поля");
-                        return;
-                    }
-                   
-                    using (SqlCommand command = new SqlCommand(insertinto, MainForm.sqlConnection))
-                    {
-                        command.Parameters.AddWithValue("@Name", SupplierName.Text);
-                        command.Parameters.AddWithValue("@Country", country.Text);
-                        command.Parameters.AddWithValue("@ContactInfo", SupplierContacts.Text);
-                        command.Parameters.AddWithValue("@Type", category);
+                        if (string.IsNullOrWhiteSpace(detailName))
+                            continue;
 
-                        int supplierId = Convert.ToInt32(command.ExecuteScalar());
+                        // Разделяем строку на название и цену
+                        string[] parts = detailName.Split(',');
 
-                        string insert = "INSERT INTO SmallSuppliers (SupplierId, Specialization) VALUES (@a, @b)";
-                        using (SqlCommand com = new SqlCommand(insert, MainForm.sqlConnection))
+                        // Проверяем, существует ли деталь
+                        string checkQuery = "SELECT DetailID FROM Detail WHERE Name = @Name";
+                        SqlCommand checkCommand = new SqlCommand(checkQuery, MainForm.sqlConnection);
+                        checkCommand.Parameters.AddWithValue("@Name", parts[0]);
+                        object result = checkCommand.ExecuteScalar();
+
+                        int detailID;
+
+                        if (result == null)
                         {
-                            com.Parameters.AddWithValue("@a", supplierId);
-                            com.Parameters.AddWithValue("@b", specialization.Text);
-
-                            com.ExecuteNonQuery();
+                            // Добавляем новую деталь
+                            string insertDetailQuery = "INSERT INTO Detail (Name) OUTPUT INSERTED.DetailID VALUES (@Name)";
+                            SqlCommand insertCommand = new SqlCommand(insertDetailQuery, MainForm.sqlConnection);
+                            insertCommand.Parameters.AddWithValue("@Name", parts[0]);
+                            detailID = (int)insertCommand.ExecuteScalar();
                         }
-                    }
-                    break;
-
-                case "Магазин":
-                    if (location.Text == null || location.Text == "")
-                    {
-                        MessageBox.Show("Заполните поля");
-                        return;
-                    }
-                    using (SqlCommand command = new SqlCommand(insertinto, MainForm.sqlConnection))
-                    {
-                        command.Parameters.AddWithValue("@Name", SupplierName.Text);
-                        command.Parameters.AddWithValue("@Country", country.Text);
-                        command.Parameters.AddWithValue("@ContactInfo", SupplierContacts.Text);
-                        command.Parameters.AddWithValue("@Type", category);
-
-                        int supplierId = Convert.ToInt32(command.ExecuteScalar());
-
-                        string insert = "INSERT INTO Shops (SupplierId, Location) VALUES (@a, @b)";
-                        using (SqlCommand com = new SqlCommand(insert, MainForm.sqlConnection))
+                        else
                         {
-                            com.Parameters.AddWithValue("@a", supplierId);
-                            com.Parameters.AddWithValue("@b", location.Text);
-
-                            com.ExecuteNonQuery();
+                            detailID = (int)result;
                         }
+
+                        decimal price = Convert.ToDecimal(parts[1]);
+
+                        string insertSupplierDetailQuery = "INSERT INTO [SupplierDetails] (SupplierID, DetailID, Price) VALUES (@SupplierID, @DetailID, @Price)";
+                        SqlCommand supplierDetailCommand = new SqlCommand(insertSupplierDetailQuery, MainForm.sqlConnection);
+                        supplierDetailCommand.Parameters.AddWithValue("@SupplierID", supplierID);
+                        supplierDetailCommand.Parameters.AddWithValue("@DetailID", detailID);
+                        supplierDetailCommand.Parameters.AddWithValue("@Price", price);
+                        supplierDetailCommand.ExecuteNonQuery();
                     }
-                    break;
-
-                case "Небольшое производство":
-                    using (SqlCommand command = new SqlCommand(insertinto, MainForm.sqlConnection))
-                    {
-                        command.Parameters.AddWithValue("@Name", SupplierName.Text);
-                        command.Parameters.AddWithValue("@Country", country.Text);
-                        command.Parameters.AddWithValue("@ContactInfo", SupplierContacts.Text);
-                        command.Parameters.AddWithValue("@Type", category);
-
-                        int supplierId = Convert.ToInt32(command.ExecuteScalar());
-
-                        string insert = "INSERT INTO SmallProductions (SupplierId, ProductionCapacity) VALUES (@a, @b)";
-                        using (SqlCommand com = new SqlCommand(insert, MainForm.sqlConnection))
-                        {
-                            com.Parameters.AddWithValue("@a", supplierId);
-                            com.Parameters.AddWithValue("@b", productionCapacity.Value);
-
-                            com.ExecuteNonQuery();
-                        }
-                    }
-                    break;
-                default:
-                    MessageBox.Show("Выберите категорию");
-                    break;
+                    MessageBox.Show("Добавлено");
+                }
             }
+            else
+            {
+                MessageBox.Show("Загрузите список деталей и заполните поля");
+            }
+           
             LoadSupplier();
         }
 
-        private void SupplierCategories_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string category = Convert.ToString(SupplierCategories.SelectedItem);
-
-            switch (category)
-            {
-                case "Производитель":
-                    label6.Visible = true;
-                    label7.Visible = true;
-                    label8.Visible = false;
-                    label9.Visible = false;
-                    label10.Visible = false;
-                    label11.Visible = false;
-                    warrantyPeriod.Visible = true;
-                    contractDetails.Visible = true;
-                    discountRate.Visible = false;
-                    specialization.Visible = false;
-                    location.Visible = false;
-                    productionCapacity.Visible = false;
-                    break;
-                case "Дилер":
-                    label6.Visible = true;
-                    label7.Visible = true;
-                    label8.Visible = true;
-                    label9.Visible = false;
-                    label10.Visible = false;
-                    label11.Visible = false;
-                    warrantyPeriod.Visible = true;
-                    contractDetails.Visible = true;
-                    discountRate.Visible = true;
-                    specialization.Visible = false;
-                    location.Visible = false;
-                    productionCapacity.Visible = false;
-                    break;
-                case "Мелкий поставщик":
-                    label6.Visible = false;
-                    label7.Visible = false;
-                    label8.Visible = false;
-                    label9.Visible = true;
-                    label10.Visible = false;
-                    label11.Visible = false;
-                    warrantyPeriod.Visible = false;
-                    contractDetails.Visible = false;
-                    discountRate.Visible = false;
-                    specialization.Visible = true;
-                    location.Visible = false;
-                    productionCapacity.Visible = false;
-                    break;
-                case "Магазин":
-                    label6.Visible = false;
-                    label7.Visible = false;
-                    label8.Visible = false;
-                    label9.Visible = false;
-                    label10.Visible = true;
-                    label11.Visible = false;
-                    warrantyPeriod.Visible = false;
-                    contractDetails.Visible = false;
-                    discountRate.Visible = false;
-                    specialization.Visible = false;
-                    location.Visible = true;
-                    productionCapacity.Visible = false;
-                    break;
-                case "Небольшое производство":
-                    label6.Visible = false;
-                    label7.Visible = false;
-                    label8.Visible = false;
-                    label9.Visible = false;
-                    label10.Visible = false;
-                    label11.Visible = true;
-                    warrantyPeriod.Visible = false;
-                    contractDetails.Visible = false;
-                    discountRate.Visible = false;
-                    specialization.Visible = false;
-                    location.Visible = false;
-                    productionCapacity.Visible = true;
-                    break;
-                default:
-                    MessageBox.Show("Выберите категорию");
-                    break;
-            }
-        }
+       
 
         private void EditSupplier_Click(object sender, EventArgs e)
         {
             LoadSupplier();
-            LoadSupplier2();
+
         }
 
-        private void print_Click(object sender, EventArgs e)
+        private void SuppliersForm_Load(object sender, EventArgs e)
         {
-            LoadSupplier2();
+            LoadCountriesToComboBox();
+            LoadTypesToComboBox();
+            LoadSupplier();
+        }
+
+        private void btnImportDetails_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Текстовые файлы (*.txt)|*.txt",
+                Title = "Выберите файл с деталями"
+            };
+
+            if (openFileDialog.ShowDialog() != DialogResult.OK)
+                return;
+
+            try
+            {
+                // Читаем файл
+                this.detailNames = File.ReadAllLines(openFileDialog.FileName);
+
+                if (detailNames.Length == 0)
+                {
+                    MessageBox.Show("Файл пуст!");
+                    return;
+                }
+                MessageBox.Show("Детали успешно импортированы!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка при импорте деталей: " + ex.Message);
+            }
         }
     }
 }

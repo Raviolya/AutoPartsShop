@@ -52,7 +52,6 @@ namespace AutoPartsShop
         private void button_SuppliersForm_Click(object sender, EventArgs e)
         {
             SuppliersForm.MainForm = this; // Устанавливаем свойство
-            SuppliersForm.LoadSupplier();
             SuppliersForm.Show();
             this.Hide();
         }
@@ -98,9 +97,7 @@ namespace AutoPartsShop
 
         private void button_StatisticsForm_Click(object sender, EventArgs e)
         {
-            StatisticsForm.MainForm = this; // Устанавливаем свойство
-            StatisticsForm.Show();
-            this.Hide();
+            MessageBox.Show("Уважаемая Татьяна Викторовна, к сожалению мы не успели реализовать статистику, так как не успевали сдать другой проект, приносим свои извинения!");
         }
 
         

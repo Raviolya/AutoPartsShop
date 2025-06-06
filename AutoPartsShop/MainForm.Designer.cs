@@ -30,7 +30,6 @@
         {
             this.MainPanel = new System.Windows.Forms.Panel();
             this.button_StatisticsForm = new System.Windows.Forms.Button();
-            this.button_WarehouseForm = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button_DefectsForm = new System.Windows.Forms.Button();
             this.button_SalesForm = new System.Windows.Forms.Button();
@@ -45,7 +44,6 @@
             // 
             this.MainPanel.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.MainPanel.Controls.Add(this.button_StatisticsForm);
-            this.MainPanel.Controls.Add(this.button_WarehouseForm);
             this.MainPanel.Controls.Add(this.label1);
             this.MainPanel.Controls.Add(this.button_DefectsForm);
             this.MainPanel.Controls.Add(this.button_SalesForm);
@@ -68,17 +66,6 @@
             this.button_StatisticsForm.Text = "Статистика";
             this.button_StatisticsForm.UseVisualStyleBackColor = false;
             this.button_StatisticsForm.Click += new System.EventHandler(this.button_StatisticsForm_Click);
-            // 
-            // button_WarehouseForm
-            // 
-            this.button_WarehouseForm.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button_WarehouseForm.Location = new System.Drawing.Point(514, 490);
-            this.button_WarehouseForm.Name = "button_WarehouseForm";
-            this.button_WarehouseForm.Size = new System.Drawing.Size(192, 84);
-            this.button_WarehouseForm.TabIndex = 8;
-            this.button_WarehouseForm.Text = "Склад";
-            this.button_WarehouseForm.UseVisualStyleBackColor = false;
-            this.button_WarehouseForm.Click += new System.EventHandler(this.button_WarehouseForm_Click);
             // 
             // label1
             // 
@@ -152,7 +139,7 @@
             this.button_ProductsForm.Name = "button_ProductsForm";
             this.button_ProductsForm.Size = new System.Drawing.Size(192, 84);
             this.button_ProductsForm.TabIndex = 0;
-            this.button_ProductsForm.Text = "Управление номенклатурой товаров";
+            this.button_ProductsForm.Text = "Склад";
             this.button_ProductsForm.UseVisualStyleBackColor = false;
             this.button_ProductsForm.Click += new System.EventHandler(this.button_ProductsForm_Click);
             // 
@@ -179,10 +166,9 @@
         private System.Windows.Forms.Button button_CustomerRequestsForm;
         private System.Windows.Forms.Button button_OrdersForm;
         private System.Windows.Forms.Button button_SuppliersForm;
-        private System.Windows.Forms.Button button_ProductsForm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_StatisticsForm;
-        private System.Windows.Forms.Button button_WarehouseForm;
+        private System.Windows.Forms.Button button_ProductsForm;
     }
 }
 

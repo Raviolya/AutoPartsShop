@@ -16,10 +16,6 @@ namespace AutoPartsShop
 
             try
             {
-                using (var context = new AppDbContext())
-                {
-                    context.Database.CreateIfNotExists();
-                }
                 Application.Run(new MainForm());
             }
             catch (Exception ex)
