@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="AutoPartsShop.exe" version="1.0.0.0" publicKeyToken="a63838d5742458d9" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="AutoPartsShop" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="AutoPartsShop.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Параметры манифеста UAC
+          Если нужно изменить уровень контроля учетных записей Windows, замените 
+          узел requestedExecutionLevel одним из следующих значений.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+        Если нужно использовать виртуализацию файлов и реестра для обратной
+             совместимости, удалите узел requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AutoPartsShop.exe" size="50096">
+      <assemblyIdentity name="AutoPartsShop" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>dwTeHSe25pE2/zhHSfelDpDGQmsdBaaGPPvGsCB0a5o=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.dll" size="4991352">
+      <assemblyIdentity name="EntityFramework" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>/0K8pwRgXhh6u0VSOGixUSjWrxworUCkV51QfTSpU7I=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.SqlServer.dll" size="591752">
+      <assemblyIdentity name="EntityFramework.SqlServer" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>qWDdTS8PN7PAn/uVZ8MkJrh5ExDX65NcBMgZw9Rr1J4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="AutoPartsShop.exe.config" size="412">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>P6bmNW0KjbcfP1J97SLqLMWUR5dh829+/pV4zE9HoSg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Database1.mdf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JILF4z/OfLxe5vzVozAulHt8/qkXxixvQVr4p3iDja0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Database1_log.ldf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zHRGsbRLrLX1Jwz+qEhxQbwwPBcTp8oKa+O8d35PByY=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=Comp\Computer" issuerKeyHash="c0d3f1f5d10346cccc4a4d267279c78f328f2d29" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>6nOWp3iKvEhqVjMMiJmkjTsipHVboZ8fEpLGJi1IOWw=</DigestValue></Reference></SignedInfo><SignatureValue>ao3pTE0+Gmse30SnOXYX5OlW3x0AdBaIUZR4URisv64QlZwNfhRx0dNOPnr3l57YZdWXe7SfSLJhXyMX11K0XaGwpJcjP5CDiuSrdKxLzsWtzpF9hWmJoVd8COCsq9h34GupSGpSSMcPhlo4YGM4SGaQAijEHusNGWzYk4eN7kI=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>7Dkvu8QlAvbLBTLayfux9OtBYNPPBKOhi4sEG/kJb+H0DMxScDj+523Ay7gMFZ+9cizpdVwvmAhukjM7kLRVfQNb3WQFmwpRpBAzvHXAWdHVKDnKV+2868otx6RpeBFahXTb5uT6TTNKgYO6bClylmiMdde7AI4jinIXxBt9Yek=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="6c39482d26c692121f9fa15b75a4223b8da499880c33566a48bc8a78a79673ea" Description="" Url=""><as:assemblyIdentity name="AutoPartsShop.exe" version="1.0.0.0" publicKeyToken="a63838d5742458d9" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=Comp\Computer</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>XbBQbllB+RmD2aEXpOAI9U+Y+Lf/ssTHX03cDIAx1Qk=</DigestValue></Reference></SignedInfo><SignatureValue>mJGOHo/Zerl7gJpPZaZMCZBw9t+WcxyRPiZ2Wq1JKjZXBtS0D5AMWW94lCBfFW9Erc4HpLFawZAmTvCoGVRbPQafp3YmO03lswLhmmtT+N+DSv47RJxBxLYHnn0eWQq47ogNUhvbuI3iYppNTWpIOGEPlkCKqi8lb0QdeNRY4lU=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>7Dkvu8QlAvbLBTLayfux9OtBYNPPBKOhi4sEG/kJb+H0DMxScDj+523Ay7gMFZ+9cizpdVwvmAhukjM7kLRVfQNb3WQFmwpRpBAzvHXAWdHVKDnKV+2868otx6RpeBFahXTb5uT6TTNKgYO6bClylmiMdde7AI4jinIXxBt9Yek=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBzTCCATagAwIBAgIQacOBbBZySbFFuN34Kl7YFjANBgkqhkiG9w0BAQsFADAlMSMwIQYDVQQDHhoAQwBvAG0AcABcAEMAbwBtAHAAdQB0AGUAcjAeFw0yNTA2MDgxNjI1MDdaFw0yNjA2MDgyMjI1MDdaMCUxIzAhBgNVBAMeGgBDAG8AbQBwAFwAQwBvAG0AcAB1AHQAZQByMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDsOS+7xCUC9ssFMtrJ+7H060Fg088Eo6GLiwQb+Qlv4fQMzFJwOP7nbcDLuAwVn71yLOl1XC+YCG6SMzuQtFV9A1vdZAWbClGkEDO8dcBZ0dUoOcpX7bzryi3HpGl4EVqFdNvm5PpNM0qBg7psKXKWaIx117sAjiOKchfEG31h6QIDAQABMA0GCSqGSIb3DQEBCwUAA4GBABUqdnNDhoPVUaCCeydFStQkMH5ItCgHoCmJ380y6AIfIcAtVXx1c++SmRVPXBuOgPf+7OcOr1pE8uhDoGd+UCb9pu/wsnEIWxXtJ1qEnXXIFvzHydAHlf6Olbpy3p9JMhqcfh+ujQnX/c2aWF2QDzoK3LdHPwrjxA5mYC6V57wm</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
