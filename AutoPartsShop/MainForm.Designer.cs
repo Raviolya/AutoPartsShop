@@ -33,7 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button_DefectsForm = new System.Windows.Forms.Button();
             this.button_SalesForm = new System.Windows.Forms.Button();
-            this.button_CustomerRequestsForm = new System.Windows.Forms.Button();
             this.button_OrdersForm = new System.Windows.Forms.Button();
             this.button_SuppliersForm = new System.Windows.Forms.Button();
             this.button_ProductsForm = new System.Windows.Forms.Button();
@@ -47,7 +46,6 @@
             this.MainPanel.Controls.Add(this.label1);
             this.MainPanel.Controls.Add(this.button_DefectsForm);
             this.MainPanel.Controls.Add(this.button_SalesForm);
-            this.MainPanel.Controls.Add(this.button_CustomerRequestsForm);
             this.MainPanel.Controls.Add(this.button_OrdersForm);
             this.MainPanel.Controls.Add(this.button_SuppliersForm);
             this.MainPanel.Controls.Add(this.button_ProductsForm);
@@ -71,16 +69,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(245, 42);
+            this.label1.Location = new System.Drawing.Point(190, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(745, 41);
+            this.label1.Size = new System.Drawing.Size(868, 41);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Информационная система нашего магазина";
+            this.label1.Text = "Информационная система магазина автозапчастей";
             // 
             // button_DefectsForm
             // 
             this.button_DefectsForm.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button_DefectsForm.Location = new System.Drawing.Point(95, 490);
+            this.button_DefectsForm.Location = new System.Drawing.Point(514, 490);
             this.button_DefectsForm.Name = "button_DefectsForm";
             this.button_DefectsForm.Size = new System.Drawing.Size(192, 84);
             this.button_DefectsForm.TabIndex = 5;
@@ -91,24 +89,13 @@
             // button_SalesForm
             // 
             this.button_SalesForm.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button_SalesForm.Location = new System.Drawing.Point(95, 320);
+            this.button_SalesForm.Location = new System.Drawing.Point(95, 490);
             this.button_SalesForm.Name = "button_SalesForm";
             this.button_SalesForm.Size = new System.Drawing.Size(192, 84);
             this.button_SalesForm.TabIndex = 4;
             this.button_SalesForm.Text = "Продажи";
             this.button_SalesForm.UseVisualStyleBackColor = false;
             this.button_SalesForm.Click += new System.EventHandler(this.button_SalesForm_Click);
-            // 
-            // button_CustomerRequestsForm
-            // 
-            this.button_CustomerRequestsForm.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button_CustomerRequestsForm.Location = new System.Drawing.Point(924, 320);
-            this.button_CustomerRequestsForm.Name = "button_CustomerRequestsForm";
-            this.button_CustomerRequestsForm.Size = new System.Drawing.Size(192, 84);
-            this.button_CustomerRequestsForm.TabIndex = 3;
-            this.button_CustomerRequestsForm.Text = "Заполнить заявку";
-            this.button_CustomerRequestsForm.UseVisualStyleBackColor = false;
-            this.button_CustomerRequestsForm.Click += new System.EventHandler(this.button_CustomerRequestsForm_Click);
             // 
             // button_OrdersForm
             // 
@@ -163,7 +150,6 @@
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Button button_DefectsForm;
         private System.Windows.Forms.Button button_SalesForm;
-        private System.Windows.Forms.Button button_CustomerRequestsForm;
         private System.Windows.Forms.Button button_OrdersForm;
         private System.Windows.Forms.Button button_SuppliersForm;
         private System.Windows.Forms.Label label1;

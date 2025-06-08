@@ -31,6 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnImportDetails = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.country = new System.Windows.Forms.ComboBox();
             this.webSite = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -50,8 +52,6 @@
             this.dataSuppliers = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.back = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnImportDetails = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -85,6 +85,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.SystemColors.Info;
             this.tabPage1.Controls.Add(this.btnImportDetails);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.country);
@@ -104,7 +105,27 @@
             this.tabPage1.Size = new System.Drawing.Size(1262, 516);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Добавить";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnImportDetails
+            // 
+            this.btnImportDetails.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnImportDetails.Location = new System.Drawing.Point(886, 129);
+            this.btnImportDetails.Name = "btnImportDetails";
+            this.btnImportDetails.Size = new System.Drawing.Size(167, 27);
+            this.btnImportDetails.TabIndex = 35;
+            this.btnImportDetails.Text = "Загрузить";
+            this.btnImportDetails.UseVisualStyleBackColor = false;
+            this.btnImportDetails.Click += new System.EventHandler(this.btnImportDetails_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(530, 73);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(444, 25);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "Загрузите список деталей поставщика:";
             // 
             // country
             // 
@@ -267,6 +288,7 @@
             // 
             // dataSuppliers
             // 
+            this.dataSuppliers.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dataSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataSuppliers.Dock = System.Windows.Forms.DockStyle.Left;
             this.dataSuppliers.Location = new System.Drawing.Point(0, 0);
@@ -294,27 +316,6 @@
             this.back.Text = "Главная";
             this.back.UseVisualStyleBackColor = true;
             this.back.Click += new System.EventHandler(this.back_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(530, 73);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(523, 25);
-            this.label6.TabIndex = 34;
-            this.label6.Text = "Загрузите номенклатуру деталей поставщика:";
-            // 
-            // btnImportDetails
-            // 
-            this.btnImportDetails.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btnImportDetails.Location = new System.Drawing.Point(886, 129);
-            this.btnImportDetails.Name = "btnImportDetails";
-            this.btnImportDetails.Size = new System.Drawing.Size(167, 27);
-            this.btnImportDetails.TabIndex = 35;
-            this.btnImportDetails.Text = "Загрузить";
-            this.btnImportDetails.UseVisualStyleBackColor = false;
-            this.btnImportDetails.Click += new System.EventHandler(this.btnImportDetails_Click);
             // 
             // SuppliersForm
             // 

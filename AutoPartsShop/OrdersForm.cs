@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace AutoPartsShop
 {
@@ -16,6 +19,8 @@ namespace AutoPartsShop
     public partial class OrdersForm : Form
     {
         public MainForm MainForm { get; set; } // Свойство для хранения MainForm
+
+        private List <string> sqlOrderPart = new List<string>();
         public OrdersForm()
         {
             InitializeComponent();
@@ -37,80 +42,60 @@ namespace AutoPartsShop
 
         private void AddOrder_Click(object sender, EventArgs e)
         {
-            // Вставка в таблицу Orders и получение OrderId
-            string insertOrderQuery = "INSERT INTO Orders (Date, SupplierId, Status) OUTPUT INSERTED.OrderId VALUES (@Date, @SupplierId, @Status)";
-            using (SqlCommand command = new SqlCommand(insertOrderQuery, MainForm.sqlConnection))
-            {
-                command.Parameters.AddWithValue("@Date", DateTime.Now.ToString("dd-MM-yyyy"));
-                command.Parameters.AddWithValue("@SupplierId", SupplierComboBox.SelectedValue);
-                command.Parameters.AddWithValue("@Status", "В обработке");
 
-                // Получаем ID новой записи
-                int orderId = Convert.ToInt32(command.ExecuteScalar());
 
-                
-                int partId = Convert.ToInt32(ProductsComboBox.SelectedValue);
-                int count = Convert.ToInt32(DetailCount.Value);
-
-                // Получаем Price из таблицы Products
-                string getPriceQuery = "SELECT SalePrice FROM Parts WHERE PartId = @PartId";
-                using (SqlCommand priceCommand = new SqlCommand(getPriceQuery, MainForm.sqlConnection))
-                {
-                    priceCommand.Parameters.AddWithValue("@PartId", partId);
-                    decimal price = Convert.ToDecimal(priceCommand.ExecuteScalar());
-
-                    // Вставка в таблицу OrderParts
-                    string insertOrderPartsQuery = "INSERT INTO OrderParts (OrderId, PartId, Count, Price) VALUES (@OrderId, @PartId, @Count, @Price)";
-                    using (SqlCommand orderPartsCommand = new SqlCommand(insertOrderPartsQuery, MainForm.sqlConnection))
+                    // Исправленный SQL-запрос с правильным регистром параметров
+                    string insertOrderQuery = "INSERT INTO [Order] (SupplierID, Date) OUTPUT INSERTED.OrderID VALUES (@SupplierID, @Date)";
+                    using (SqlCommand command = new SqlCommand(insertOrderQuery, MainForm.sqlConnection))
                     {
-                        orderPartsCommand.Parameters.AddWithValue("@OrderId", orderId);
-                        orderPartsCommand.Parameters.AddWithValue("@PartId", partId);
-                        orderPartsCommand.Parameters.AddWithValue("@Count", count);
-                        orderPartsCommand.Parameters.AddWithValue("@Price", price * count);
+                        // Добавление параметров с правильным регистром и типом
+                        command.Parameters.AddWithValue("@SupplierID", SupplierComboBox.SelectedValue ?? DBNull.Value);
+                        command.Parameters.AddWithValue("@Date", DateTime.Now); // Передача DateTime напрямую
 
-                        // Выполняем вставку в OrderParts
-                        int rowsAffected = orderPartsCommand.ExecuteNonQuery();
-                        MessageBox.Show($"Добавлено строк в OrderParts: {rowsAffected}");
-                        LoadOrders1();
-                        LoadOrders2();
-                    }
-                }
+                        // Получаем ID новой записи
+                        int orderId = Convert.ToInt32(command.ExecuteScalar());
+
+                        // Выполняем команды из sqlOrderPart
+                        foreach (string sql in this.sqlOrderPart)
+                        {
+                            using (SqlCommand orderPartsCommand = new SqlCommand(sql, MainForm.sqlConnection))
+                            {
+                                // Добавляем параметр OrderID
+                                orderPartsCommand.Parameters.AddWithValue("@OrderID", orderId);
+
+                                // Выполняем вставку в OrderParts
+                                orderPartsCommand.ExecuteNonQuery();
+                            }
+                        }
+
+                        // Скрываем ComboBox после завершения всех операций
+                        SupplierComboBox.Visible = false;
             }
-            
         }
 
-        public void LoadProductsComboBox ()
-        {
-            using (SqlCommand command = new SqlCommand("SELECT PartId, Name FROM Parts", MainForm.sqlConnection))
-            {
-                command.CommandType = CommandType.Text;
-                DataTable table = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(table);
-                ProductsComboBox.DisplayMember = "Name";
-                ProductsComboBox.ValueMember = "PartId";
-                ProductsComboBox.DataSource = table;
-            }
-        }   
 
         public void LoadSupplierComboBox ()
         {
-            using (SqlCommand command = new SqlCommand("SELECT SupplierId, Name FROM Suppliers", MainForm.sqlConnection))
+            using (SqlCommand command = new SqlCommand("SELECT SupplierID, Name FROM Supplier", MainForm.sqlConnection))
             {
                 command.CommandType = CommandType.Text;
                 DataTable table = new DataTable();
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 adapter.Fill(table);
                 SupplierComboBox.DisplayMember = "Name";
-                SupplierComboBox.ValueMember = "SupplierId";
+                SupplierComboBox.ValueMember = "SupplierID";
                 SupplierComboBox.DataSource = table;
             }
+            
         }
 
         public void LoadOrders1()
         {
             SqlDataAdapter dataAdapter = new SqlDataAdapter(
-                "SELECT * FROM Orders", MainForm.sqlConnection);
+                "SELECT Detail.Name AS Деталь, Supplier.Name AS Поставщик, [OrderPart].Count AS Количество, [Order].Date AS Дата FROM [OrderPart] " +
+                "JOIN [Order] ON [OrderPart].OrderID = [Order].OrderID " +
+                "JOIN Detail ON [OrderPart].DetailID = Detail.DetailID " +
+                "JOIN Supplier ON [OrderPart].SupplierID = Supplier.SupplierID", MainForm.sqlConnection);
 
             DataSet ds = new DataSet();
 
@@ -118,142 +103,94 @@ namespace AutoPartsShop
             orderDataGrid.DataSource = ds.Tables[0];
         }
 
-        public void LoadOrders2()
-        {
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(
-                "SELECT * FROM OrderParts", MainForm.sqlConnection);
-
-            DataSet ds = new DataSet();
-
-            dataAdapter.Fill(ds);
-            orderDataGrid2.DataSource = ds.Tables[0];
-        }
-
         private void EditOrder_Click(object sender, EventArgs e)
         {
             LoadOrders1();
-            LoadOrders2();
         }
 
         private void editStatus_Click(object sender, EventArgs e)
         {
-            if (cell.Visible == false)
+            
+        }
+
+        private void searchDetail_Click(object sender, EventArgs e)
+        {
+            string selectDetails = $"SELECT * FROM Detail WHERE Name LIKE '%{Details.Text}%'";
+
+            using (SqlCommand command1 = new SqlCommand(selectDetails, MainForm.sqlConnection))
             {
-                label5.Visible = true;
-                cell.Visible = true;
-                MessageBox.Show("Выберите ячейку и снова кликните на кнопку");
+                command1.CommandType = CommandType.Text;
+                DataTable table = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command1);
+                adapter.Fill(table);
+                DetailsComboBox.DisplayMember = "Name";
+                DetailsComboBox.ValueMember = "DetailID";
+                DetailsComboBox.DataSource = table;
             }
-            else
+        }
+
+        private void selectDetail_Click(object sender, EventArgs e)
+        {
+            try
             {
-                label5.Visible = false;
-                cell.Visible = false;
+                string selectSuppliers = "SELECT Supplier.SupplierID, Supplier.Name " +
+                    "FROM Detail " +
+                    "JOIN SupplierDetails ON Detail.DetailID = SupplierDetails.DetailID " +
+                    "JOIN Supplier ON SupplierDetails.SupplierID = Supplier.SupplierID " +
+                    "WHERE Detail.Name = @Name";
 
-                if (orderDataGrid.CurrentRow == null)
+                using (SqlCommand command = new SqlCommand(selectSuppliers, MainForm.sqlConnection))
                 {
-                    MessageBox.Show("Выберите строку в таблице.");
-                    return;
-                }
-
-                string partId = Convert.ToString(orderDataGrid.CurrentRow.Cells["Status"].Value);
-                int id = Convert.ToInt32(orderDataGrid.CurrentRow.Cells["OrderId"].Value);
-
-                if (partId == "Выполнен")
-                {
-                    MessageBox.Show("Заказ уже выполнен.");
-                    return;
-                }
-
-                try
-                {
-                    if (MainForm.sqlConnection.State != System.Data.ConnectionState.Open)
-                        MainForm.sqlConnection.Open();
-
-                    string updateQuery = "UPDATE Orders SET Status = @Status WHERE OrderId = @OrderId";
-                    using (SqlCommand command = new SqlCommand(updateQuery, MainForm.sqlConnection))
+                    // Извлекаем DataRowView из SelectedItem
+                    DataRowView selectedRow = DetailsComboBox.SelectedItem as DataRowView;
+                    if (selectedRow == null)
                     {
-                        command.Parameters.AddWithValue("@Status", "Выполнен");
-                        command.Parameters.AddWithValue("@OrderId", id);
-                        int rowsAffected = command.ExecuteNonQuery();
-                        if (rowsAffected == 0)
-                            MessageBox.Show("Заказ не найден или не обновлён.");
-                    }
-
-                    LoadOrders1();
-
-
-
-                    string getPartId = "SELECT PartId, Count FROM OrderParts WHERE OrderId = @OrderId";
-                    List<OrderPartsItem> items = new List<OrderPartsItem>();
-                    using (SqlCommand cmd = new SqlCommand(getPartId, MainForm.sqlConnection))
-                    {
-                        cmd.Parameters.AddWithValue("@OrderId", id);
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                int PartId = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
-                                int Count = reader.IsDBNull (1) ? 0 : reader.GetInt32(1);
-                                items.Add(new OrderPartsItem(PartId, Count));
-                            }
-                        }
-                    }
-
-                    if (items.Count == 0)
-                    {
-                        MessageBox.Show($"Нет записей в OrderParts для OrderId {id}.");
+                        MessageBox.Show("Пожалуйста, выберите деталь.");
                         return;
                     }
 
-                  
-                    if (cell.Value == null || !int.TryParse(cell.Value.ToString(), out int currentCell))
+                    // Извлекаем значение столбца Name
+                    string nameValue = selectedRow["Name"]?.ToString();
+                    if (string.IsNullOrEmpty(nameValue))
                     {
-                        MessageBox.Show("Некорректное значение ячейки.");
+                        MessageBox.Show("Имя детали не может быть пустым.");
                         return;
                     }
 
+                    // Передаём строку в параметр
+                    command.Parameters.AddWithValue("@Name", nameValue);
+                    command.CommandType = CommandType.Text;
 
-                    string addParts = "INSERT INTO Warehouse (PartId, Cell, IsSold) VALUES (@PartId, @Cell, 0)";
-                    int insertedCount = 0;
-                    foreach (OrderPartsItem value in items)
+                    DataTable table = new DataTable();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                     {
-                        for (int i = 0; i < value.Count; i++)
-                        {
-                            using (SqlCommand cmd1 = new SqlCommand(addParts, MainForm.sqlConnection))
-                            {
-                                cmd1.Parameters.AddWithValue("@PartId", value.PartId);
-                                cmd1.Parameters.AddWithValue("@Cell", currentCell);
-                                int rowsAffected = cmd1.ExecuteNonQuery();
-                                insertedCount += rowsAffected;
-                            }
-                        }
+                        adapter.Fill(table);
                     }
 
-                    if (insertedCount > 0)
-                        MessageBox.Show($"Успешно добавлено {insertedCount} записей в Warehouse.");
-                    else
-                        MessageBox.Show("Не удалось добавить записи в Warehouse.");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Ошибка: {ex.Message}");
+                    // Настройка SupplierComboBox
+                    SupplierComboBox.DisplayMember = "Name";
+                    SupplierComboBox.ValueMember = "SupplierID";
+                    SupplierComboBox.DataSource = table;
+                    SupplierComboBox.Visible = true;
+                    DetailsComboBox.Enabled = true;
                 }
             }
-        }
-    }
-    public class OrderPartsItem
-    {
-        public int PartId { get; set; }
-        public int Count { get; set; }
-
-        public OrderPartsItem(int partId, int count)
-        {
-            PartId = partId;
-            Count = count;
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Произошла ошибка: {ex.Message}");
+            }
         }
 
-        public override string ToString()
+        private void button1_Click(object sender, EventArgs e)
         {
-            return $"PartId: {PartId}, Count: {Count}";
+            string addOrder = $"INSERT INTO OrderPart (OrderID, DetailID, Count, SupplierID) VALUES (@OrderID, {DetailsComboBox.SelectedValue}, {Convert.ToInt32(DetailCount.Value)}, {SupplierComboBox.SelectedValue})";
+            this.sqlOrderPart.Add(addOrder);
+            SupplierComboBox.Enabled = false;
+        }
+
+        private void OrdersForm_Load(object sender, EventArgs e)
+        {
+            LoadOrders1();
         }
     }
 }
