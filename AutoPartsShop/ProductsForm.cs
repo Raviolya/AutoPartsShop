@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace AutoPartsShop
 {
@@ -19,12 +20,16 @@ namespace AutoPartsShop
             InitializeComponent();
         }
 
-        public void LoadParts()
+        public void LoadDetails()
         {
             SqlDataAdapter dataAdapter = new SqlDataAdapter(
-                "SELECT Detail.Name AS Название, Warehouse.Cell AS Ячейка, Warehouse.Price AS Цена " +
+                "SELECT Detail.Name AS Название, Warehouse.Cell AS Ячейка, SupplierDetails.Price AS Цена, OrderPart.Count - COALESCE(Request.COUNT, 0) AS Количество " +
                 "FROM Warehouse " +
-                "JOIN Detail ON Warehouse.DetailID = Detail.DetailID", MainForm.sqlConnection);
+                "JOIN OrderPart ON Warehouse.OrderID = OrderPart.OrderID AND Warehouse.DetailID = OrderPart.DetailID " +
+                "JOIN[Order] ON OrderPart.OrderID = [Order].OrderID " +
+                "JOIN SupplierDetails ON OrderPart.SupplierID = SupplierDetails.SupplierID AND OrderPart.DetailID = SupplierDetails.DetailID " +
+                "JOIN Detail ON OrderPart.DetailID = Detail.DetailID " +
+                "LEFT JOIN Request ON OrderPart.OrderID = Request.OrderID AND OrderPart.DetailID = Request.DetailID", MainForm.sqlConnection);
 
             DataSet ds = new DataSet();
 
@@ -48,7 +53,12 @@ namespace AutoPartsShop
 
         private void EditProduct_Click(object sender, EventArgs e)
         {
-            LoadParts();
+            LoadDetails();
+        }
+
+        private void ProductsForm_Load(object sender, EventArgs e)
+        {
+            LoadDetails();
         }
     }
 }

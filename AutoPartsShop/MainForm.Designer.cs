@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.button_StatisticsForm = new System.Windows.Forms.Button();
+            this.button_RequestForm = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button_DefectsForm = new System.Windows.Forms.Button();
             this.button_SalesForm = new System.Windows.Forms.Button();
@@ -42,7 +42,7 @@
             // MainPanel
             // 
             this.MainPanel.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.MainPanel.Controls.Add(this.button_StatisticsForm);
+            this.MainPanel.Controls.Add(this.button_RequestForm);
             this.MainPanel.Controls.Add(this.label1);
             this.MainPanel.Controls.Add(this.button_DefectsForm);
             this.MainPanel.Controls.Add(this.button_SalesForm);
@@ -54,16 +54,16 @@
             this.MainPanel.Size = new System.Drawing.Size(1544, 632);
             this.MainPanel.TabIndex = 0;
             // 
-            // button_StatisticsForm
+            // button_RequestForm
             // 
-            this.button_StatisticsForm.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button_StatisticsForm.Location = new System.Drawing.Point(924, 490);
-            this.button_StatisticsForm.Name = "button_StatisticsForm";
-            this.button_StatisticsForm.Size = new System.Drawing.Size(192, 84);
-            this.button_StatisticsForm.TabIndex = 9;
-            this.button_StatisticsForm.Text = "Статистика";
-            this.button_StatisticsForm.UseVisualStyleBackColor = false;
-            this.button_StatisticsForm.Click += new System.EventHandler(this.button_StatisticsForm_Click);
+            this.button_RequestForm.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button_RequestForm.Location = new System.Drawing.Point(924, 490);
+            this.button_RequestForm.Name = "button_RequestForm";
+            this.button_RequestForm.Size = new System.Drawing.Size(192, 84);
+            this.button_RequestForm.TabIndex = 9;
+            this.button_RequestForm.Text = "Статистика";
+            this.button_RequestForm.UseVisualStyleBackColor = false;
+            this.button_RequestForm.Click += new System.EventHandler(this.button_RequestForm_Click);
             // 
             // label1
             // 
@@ -153,7 +153,7 @@
         private System.Windows.Forms.Button button_OrdersForm;
         private System.Windows.Forms.Button button_SuppliersForm;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button_StatisticsForm;
+        private System.Windows.Forms.Button button_RequestForm;
         private System.Windows.Forms.Button button_ProductsForm;
     }
 }

@@ -167,7 +167,6 @@ namespace AutoPartsShop
         private void EditSupplier_Click(object sender, EventArgs e)
         {
             LoadSupplier();
-
         }
 
         private void SuppliersForm_Load(object sender, EventArgs e)

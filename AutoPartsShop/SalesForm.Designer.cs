@@ -28,232 +28,321 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.back = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.Statistica = new System.Windows.Forms.Button();
-            this.SupplierSale = new System.Windows.Forms.Button();
-            this.RemoveSale = new System.Windows.Forms.Button();
-            this.EditSale = new System.Windows.Forms.Button();
-            this.ProductCount = new System.Windows.Forms.NumericUpDown();
-            this.ProductsComboBox = new System.Windows.Forms.ComboBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.PhoneTextBox = new System.Windows.Forms.TextBox();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
+            this.Phonelabel = new System.Windows.Forms.Label();
+            this.Namelabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.DetailsComboBox = new System.Windows.Forms.ComboBox();
+            this.Details = new System.Windows.Forms.TextBox();
+            this.searchDetail = new System.Windows.Forms.Button();
+            this.DetailCount = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.AddSale = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dataSales = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.back = new System.Windows.Forms.Button();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSales)).BeginInit();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.SaleDataGrid = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DetailCount)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SaleDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel2
+            // panel1
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Location = new System.Drawing.Point(-7, 383);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1556, 234);
-            this.panel2.TabIndex = 3;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Info;
-            this.panel4.Controls.Add(this.Statistica);
-            this.panel4.Controls.Add(this.SupplierSale);
-            this.panel4.Controls.Add(this.RemoveSale);
-            this.panel4.Controls.Add(this.EditSale);
-            this.panel4.Controls.Add(this.ProductCount);
-            this.panel4.Controls.Add(this.ProductsComboBox);
-            this.panel4.Controls.Add(this.AddSale);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(7, 34);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1543, 212);
-            this.panel4.TabIndex = 6;
-            // 
-            // Statistica
-            // 
-            this.Statistica.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.Statistica.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Statistica.Location = new System.Drawing.Point(494, 40);
-            this.Statistica.Name = "Statistica";
-            this.Statistica.Size = new System.Drawing.Size(1037, 50);
-            this.Statistica.TabIndex = 18;
-            this.Statistica.Text = "Отобразить подробный отчёт о продажах";
-            this.Statistica.UseVisualStyleBackColor = false;
-            // 
-            // SupplierSale
-            // 
-            this.SupplierSale.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.SupplierSale.Location = new System.Drawing.Point(1307, 136);
-            this.SupplierSale.Name = "SupplierSale";
-            this.SupplierSale.Size = new System.Drawing.Size(224, 50);
-            this.SupplierSale.TabIndex = 17;
-            this.SupplierSale.Text = "Сохранить";
-            this.SupplierSale.UseVisualStyleBackColor = false;
-            // 
-            // RemoveSale
-            // 
-            this.RemoveSale.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.RemoveSale.Location = new System.Drawing.Point(1039, 136);
-            this.RemoveSale.Name = "RemoveSale";
-            this.RemoveSale.Size = new System.Drawing.Size(224, 50);
-            this.RemoveSale.TabIndex = 16;
-            this.RemoveSale.Text = "Удалить";
-            this.RemoveSale.UseVisualStyleBackColor = false;
-            // 
-            // EditSale
-            // 
-            this.EditSale.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.EditSale.Location = new System.Drawing.Point(782, 136);
-            this.EditSale.Name = "EditSale";
-            this.EditSale.Size = new System.Drawing.Size(224, 50);
-            this.EditSale.TabIndex = 15;
-            this.EditSale.Text = "Изменить";
-            this.EditSale.UseVisualStyleBackColor = false;
-            // 
-            // ProductCount
-            // 
-            this.ProductCount.Location = new System.Drawing.Point(143, 140);
-            this.ProductCount.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.ProductCount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.ProductCount.Name = "ProductCount";
-            this.ProductCount.Size = new System.Drawing.Size(227, 20);
-            this.ProductCount.TabIndex = 14;
-            this.ProductCount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // ProductsComboBox
-            // 
-            this.ProductsComboBox.FormattingEnabled = true;
-            this.ProductsComboBox.Location = new System.Drawing.Point(143, 69);
-            this.ProductsComboBox.Name = "ProductsComboBox";
-            this.ProductsComboBox.Size = new System.Drawing.Size(227, 21);
-            this.ProductsComboBox.TabIndex = 11;
-            // 
-            // AddSale
-            // 
-            this.AddSale.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.AddSale.Location = new System.Drawing.Point(494, 136);
-            this.AddSale.Name = "AddSale";
-            this.AddSale.Size = new System.Drawing.Size(224, 50);
-            this.AddSale.TabIndex = 6;
-            this.AddSale.Text = "Добавить";
-            this.AddSale.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(31, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Количество";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(31, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Товар";
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1234, 74);
+            this.panel1.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F);
-            this.label4.Location = new System.Drawing.Point(698, 10);
+            this.label4.Location = new System.Drawing.Point(571, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 23);
             this.label4.TabIndex = 1;
             this.label4.Text = "Продажи";
-            // 
-            // dataSales
-            // 
-            this.dataSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataSales.Location = new System.Drawing.Point(-4, 36);
-            this.dataSales.Name = "dataSales";
-            this.dataSales.Size = new System.Drawing.Size(1544, 354);
-            this.dataSales.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel1.Controls.Add(this.dataSales);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1543, 393);
-            this.panel1.TabIndex = 2;
             // 
             // back
             // 
             this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.back.Location = new System.Drawing.Point(12, 6);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(224, 26);
+            this.back.Size = new System.Drawing.Size(224, 36);
             this.back.TabIndex = 10;
             this.back.Text = "Главная";
             this.back.UseVisualStyleBackColor = true;
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel2.Controls.Add(this.tabControl1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 70);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1234, 572);
+            this.panel2.TabIndex = 11;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1234, 572);
+            this.tabControl1.TabIndex = 27;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.SystemColors.Info;
+            this.tabPage1.Controls.Add(this.PhoneTextBox);
+            this.tabPage1.Controls.Add(this.NameTextBox);
+            this.tabPage1.Controls.Add(this.Phonelabel);
+            this.tabPage1.Controls.Add(this.Namelabel);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.DetailsComboBox);
+            this.tabPage1.Controls.Add(this.Details);
+            this.tabPage1.Controls.Add(this.searchDetail);
+            this.tabPage1.Controls.Add(this.DetailCount);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.AddSale);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1226, 546);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Добавить";
+            // 
+            // PhoneTextBox
+            // 
+            this.PhoneTextBox.Location = new System.Drawing.Point(221, 104);
+            this.PhoneTextBox.Name = "PhoneTextBox";
+            this.PhoneTextBox.Size = new System.Drawing.Size(413, 20);
+            this.PhoneTextBox.TabIndex = 42;
+            // 
+            // NameTextBox
+            // 
+            this.NameTextBox.Location = new System.Drawing.Point(221, 41);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(413, 20);
+            this.NameTextBox.TabIndex = 41;
+            // 
+            // Phonelabel
+            // 
+            this.Phonelabel.AutoSize = true;
+            this.Phonelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Phonelabel.Location = new System.Drawing.Point(48, 106);
+            this.Phonelabel.Name = "Phonelabel";
+            this.Phonelabel.Size = new System.Drawing.Size(157, 18);
+            this.Phonelabel.TabIndex = 40;
+            this.Phonelabel.Text = "Мобильный телефон";
+            // 
+            // Namelabel
+            // 
+            this.Namelabel.AutoSize = true;
+            this.Namelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Namelabel.Location = new System.Drawing.Point(48, 43);
+            this.Namelabel.Name = "Namelabel";
+            this.Namelabel.Size = new System.Drawing.Size(38, 18);
+            this.Namelabel.TabIndex = 39;
+            this.Namelabel.Text = "Имя";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.button1.Location = new System.Drawing.Point(51, 425);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(224, 50);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "Добавить";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // DetailsComboBox
+            // 
+            this.DetailsComboBox.FormattingEnabled = true;
+            this.DetailsComboBox.Location = new System.Drawing.Point(221, 302);
+            this.DetailsComboBox.Name = "DetailsComboBox";
+            this.DetailsComboBox.Size = new System.Drawing.Size(413, 21);
+            this.DetailsComboBox.TabIndex = 37;
+            this.DetailsComboBox.Visible = false;
+            // 
+            // Details
+            // 
+            this.Details.Location = new System.Drawing.Point(221, 254);
+            this.Details.Name = "Details";
+            this.Details.Size = new System.Drawing.Size(413, 20);
+            this.Details.TabIndex = 34;
+            // 
+            // searchDetail
+            // 
+            this.searchDetail.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.searchDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.searchDetail.Location = new System.Drawing.Point(642, 254);
+            this.searchDetail.Name = "searchDetail";
+            this.searchDetail.Size = new System.Drawing.Size(52, 20);
+            this.searchDetail.TabIndex = 33;
+            this.searchDetail.Text = "Поиск";
+            this.searchDetail.UseVisualStyleBackColor = false;
+            this.searchDetail.Click += new System.EventHandler(this.searchDetail_Click);
+            // 
+            // DetailCount
+            // 
+            this.DetailCount.Location = new System.Drawing.Point(221, 360);
+            this.DetailCount.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.DetailCount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.DetailCount.Name = "DetailCount";
+            this.DetailCount.Size = new System.Drawing.Size(413, 20);
+            this.DetailCount.TabIndex = 30;
+            this.DetailCount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(48, 360);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(92, 18);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Количество";
+            // 
+            // AddSale
+            // 
+            this.AddSale.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.AddSale.Location = new System.Drawing.Point(373, 425);
+            this.AddSale.Name = "AddSale";
+            this.AddSale.Size = new System.Drawing.Size(224, 50);
+            this.AddSale.TabIndex = 26;
+            this.AddSale.Text = "Создать";
+            this.AddSale.UseVisualStyleBackColor = false;
+            this.AddSale.Click += new System.EventHandler(this.AddSale_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(48, 256);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 18);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Деталь";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.tableLayoutPanel1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1226, 546);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Просмотр";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.SaleDataGrid, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 98.50467F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.495327F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1220, 540);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // SaleDataGrid
+            // 
+            this.SaleDataGrid.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.SaleDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SaleDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SaleDataGrid.Location = new System.Drawing.Point(3, 3);
+            this.SaleDataGrid.Name = "SaleDataGrid";
+            this.SaleDataGrid.Size = new System.Drawing.Size(1214, 525);
+            this.SaleDataGrid.TabIndex = 2;
+            // 
             // SalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1543, 630);
-            this.Controls.Add(this.back);
+            this.ClientSize = new System.Drawing.Size(1234, 642);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.panel1);
             this.Name = "SalesForm";
             this.Text = "SalesForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SalesForm_FormClosed);
-            this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSales)).EndInit();
+            this.Load += new System.EventHandler(this.SalesForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DetailCount)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SaleDataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button back;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox ProductsComboBox;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TextBox PhoneTextBox;
+        private System.Windows.Forms.TextBox NameTextBox;
+        private System.Windows.Forms.Label Phonelabel;
+        private System.Windows.Forms.Label Namelabel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox DetailsComboBox;
+        private System.Windows.Forms.TextBox Details;
+        private System.Windows.Forms.Button searchDetail;
+        private System.Windows.Forms.NumericUpDown DetailCount;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button AddSale;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown ProductCount;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataSales;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button SupplierSale;
-        private System.Windows.Forms.Button RemoveSale;
-        private System.Windows.Forms.Button EditSale;
-        private System.Windows.Forms.Button Statistica;
-        private System.Windows.Forms.Button back;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridView SaleDataGrid;
     }
 }

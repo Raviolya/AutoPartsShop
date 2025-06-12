@@ -29,21 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.back = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.RemoveProduct = new System.Windows.Forms.Button();
-            this.EditProduct = new System.Windows.Forms.Button();
             this.dataProducts = new System.Windows.Forms.DataGridView();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.EditProduct = new System.Windows.Forms.Button();
+            this.back = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,26 +57,14 @@
             this.panel1.Size = new System.Drawing.Size(1271, 578);
             this.panel1.TabIndex = 0;
             // 
-            // back
+            // tabControl1
             // 
-            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.back.Location = new System.Drawing.Point(12, 6);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(224, 26);
-            this.back.TabIndex = 10;
-            this.back.Text = "Главная";
-            this.back.UseVisualStyleBackColor = true;
-            this.back.Click += new System.EventHandler(this.back_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(527, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 23);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Склад";
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(0, 48);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1271, 527);
+            this.tabControl1.TabIndex = 11;
             // 
             // tabPage2
             // 
@@ -106,25 +93,23 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1257, 495);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // dataProducts
+            // 
+            this.dataProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataProducts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataProducts.Location = new System.Drawing.Point(3, 3);
+            this.dataProducts.Name = "dataProducts";
+            this.dataProducts.Size = new System.Drawing.Size(1251, 439);
+            this.dataProducts.TabIndex = 13;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.EditProduct);
-            this.panel2.Controls.Add(this.RemoveProduct);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 448);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1251, 44);
             this.panel2.TabIndex = 14;
-            // 
-            // RemoveProduct
-            // 
-            this.RemoveProduct.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.RemoveProduct.Location = new System.Drawing.Point(241, 3);
-            this.RemoveProduct.Name = "RemoveProduct";
-            this.RemoveProduct.Size = new System.Drawing.Size(233, 38);
-            this.RemoveProduct.TabIndex = 13;
-            this.RemoveProduct.Text = "Удалить";
-            this.RemoveProduct.UseVisualStyleBackColor = false;
             // 
             // EditProduct
             // 
@@ -137,23 +122,26 @@
             this.EditProduct.UseVisualStyleBackColor = false;
             this.EditProduct.Click += new System.EventHandler(this.EditProduct_Click);
             // 
-            // dataProducts
+            // back
             // 
-            this.dataProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataProducts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataProducts.Location = new System.Drawing.Point(3, 3);
-            this.dataProducts.Name = "dataProducts";
-            this.dataProducts.Size = new System.Drawing.Size(1251, 439);
-            this.dataProducts.TabIndex = 13;
+            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.back.Location = new System.Drawing.Point(12, 6);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(224, 26);
+            this.back.TabIndex = 10;
+            this.back.Text = "Главная";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
-            // tabControl1
+            // label4
             // 
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 48);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1271, 527);
-            this.tabControl1.TabIndex = 11;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(527, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 23);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Склад";
             // 
             // ProductsForm
             // 
@@ -164,13 +152,14 @@
             this.Name = "ProductsForm";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProductsForm_FormClosed);
+            this.Load += new System.EventHandler(this.ProductsForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataProducts)).EndInit();
-            this.tabControl1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -188,6 +177,5 @@
         private System.Windows.Forms.DataGridView dataProducts;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button EditProduct;
-        private System.Windows.Forms.Button RemoveProduct;
     }
 }

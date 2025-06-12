@@ -18,13 +18,10 @@ namespace AutoPartsShop
         public SqlConnection sqlConnection = null;
 
         ProductsForm productForm = new ProductsForm();
-        CustomerRequestsForm CustomerRForm = new CustomerRequestsForm();
         DefectsForm DefectsForm = new DefectsForm();
         OrdersForm OrdersForm = new OrdersForm();
         SalesForm SalesForm = new SalesForm();
-        StatisticsForm StatisticsForm = new StatisticsForm();
         SuppliersForm SuppliersForm = new SuppliersForm();
-        WarehouseForm WarehouseForm = new WarehouseForm();
         public MainForm()
         {
             InitializeComponent();
@@ -44,7 +41,6 @@ namespace AutoPartsShop
         private void button_ProductsForm_Click(object sender, EventArgs e)
         {
             productForm.MainForm = this; // Устанавливаем свойство
-            productForm.LoadParts();
             productForm.Show();
             this.Hide();
         }
@@ -65,7 +61,9 @@ namespace AutoPartsShop
 
         private void button_SalesForm_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("В разработке!");
+            SalesForm.MainForm = this; // Устанавливаем свойство
+            SalesForm.Show();
+            this.Hide();
         }
 
 
@@ -74,16 +72,9 @@ namespace AutoPartsShop
             MessageBox.Show("В разработке!");
         }
 
-        private void button_WarehouseForm_Click(object sender, EventArgs e)
+        private void button_RequestForm_Click(object sender, EventArgs e)
         {
             MessageBox.Show("В разработке!");
         }
-
-        private void button_StatisticsForm_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Уважаемая Татьяна Викторовна, к сожалению мы не успели реализовать статистику, так как не успевали сдать другой проект, приносим свои извинения!");
-        }
-
-        
     }
 }

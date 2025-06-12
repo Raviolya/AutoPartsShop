@@ -106,12 +106,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerRequestsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerRequestsForm.Designer.cs">
-      <DependentUpon>CustomerRequestsForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="DefectsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,15 +150,6 @@
     <Compile Include="SuppliersForm.Designer.cs">
       <DependentUpon>SuppliersForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WarehouseForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WarehouseForm.Designer.cs">
-      <DependentUpon>WarehouseForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="CustomerRequestsForm.resx">
-      <DependentUpon>CustomerRequestsForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DefectsForm.resx">
       <DependentUpon>DefectsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,9 +179,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SuppliersForm.resx">
       <DependentUpon>SuppliersForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WarehouseForm.resx">
-      <DependentUpon>WarehouseForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="AutoPartsShop_TemporaryKey.pfx" />
     <None Include="packages.config" />
