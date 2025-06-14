@@ -25,4 +25,3 @@ C:\Users\Computer\Desktop\AutoPartsShop\AutoPartsShop\bin\x64\Debug\AutoPartsSho
 C:\Users\Computer\Desktop\AutoPartsShop\AutoPartsShop\bin\x64\Debug\AutoPartsShop.application
 C:\Users\Computer\Desktop\AutoPartsShop\AutoPartsShop\obj\x64\Debug\AutoPartsShop.exe.manifest
 C:\Users\Computer\Desktop\AutoPartsShop\AutoPartsShop\obj\x64\Debug\AutoPartsShop.application
-C:\Users\Computer\Desktop\AutoPartsShop\AutoPartsShop\obj\x64\Debug\AutoPartsShop.RequestsForm.resources

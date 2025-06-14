@@ -60,6 +60,7 @@ namespace AutoPartsShop
                 }
                 // Скрываем ComboBox после завершения всех операций
                 DetailsComboBox.Visible = false;
+                AddSale.Visible = false;
                 sqlRequest.Clear();
                 MessageBox.Show("Заказ успешно создан");
                 LoadSales();
@@ -91,6 +92,11 @@ namespace AutoPartsShop
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (DetailsComboBox.Visible == false || NameTextBox.Text == "" || PhoneTextBox.Text == "")
+            {
+                MessageBox.Show("Заполните все поля");
+                return;
+            }
             int count = Convert.ToInt32(DetailCount.Value);
             string selectOrderId = $"SELECT TOP 1 Warehouse.OrderID FROM Warehouse " +
                 $"JOIN OrderPart ON Warehouse.OrderID = OrderPart.OrderID AND Warehouse.DetailID = OrderPart.DetailID " +
@@ -105,7 +111,9 @@ namespace AutoPartsShop
                     $"VALUES ({orderId}, {DetailsComboBox.SelectedValue}, @SaleID, {count})";
                 MessageBox.Show($"Добавлено");
                 sqlRequest.Add(addOrder);
+                AddSale.Visible = true;
             }
+           
         }
 
         private void LoadSales()

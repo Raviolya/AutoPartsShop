@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AutoPartsShop.exe" size="52144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AutoPartsShop.exe" size="59312">
       <assemblyIdentity name="AutoPartsShop" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>c33F+iHW9nErUz758hajgL+QpAsOpwzSGG0U3B57mV0=</dsig:DigestValue>
+        <dsig:DigestValue>9NaeTeF+FF+pzhid/llfZRzoaETEnBs/HznLRf5IJLE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -92,7 +92,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>lM7fxbCV6MWO58so0dpvA1ZDSJcREJjS7FUNERS2Vtg=</dsig:DigestValue>
+      <dsig:DigestValue>wZM1pOkqFiZ27u7P82/XnH7U8BwAs1rZTwrPIeOe2yA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Database1_log.ldf" size="8388608" writeableType="applicationData">
@@ -101,7 +101,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>6YKuFLQ9wiWen+EO1ZgBYCiaSefwQtiZTpWGHthO2Hk=</dsig:DigestValue>
+      <dsig:DigestValue>kBewhoAwHaywpOIszhXJYrJ/qGrgw/6iDBbHbPx2QWQ=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

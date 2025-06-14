@@ -247,6 +247,7 @@
             this.AddSale.TabIndex = 26;
             this.AddSale.Text = "Создать";
             this.AddSale.UseVisualStyleBackColor = false;
+            this.AddSale.Visible = false;
             this.AddSale.Click += new System.EventHandler(this.AddSale_Click);
             // 
             // label2

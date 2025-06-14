@@ -16,14 +16,14 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 namespace AutoPartsShop
 {
 
-    
+
     public partial class OrdersForm : Form
     {
         public MainForm MainForm { get; set; } // Свойство для хранения MainForm
 
-        private List <string> sqlOrderPart = new List<string>();
+        private List<string> sqlOrderPart = new List<string>();
 
-        private List <object> ItemsRemove = new List<object>();
+        private List<object> ItemsRemove = new List<object>();
         public OrdersForm()
         {
             InitializeComponent();
@@ -99,11 +99,12 @@ namespace AutoPartsShop
                 this.sqlOrderPart.Clear();
                 MessageBox.Show("Заказ успешно создан");
                 LoadOrders1();
+                AddOrder.Visible = false;
             }
         }
 
 
-        public void LoadSupplierComboBox ()
+        public void LoadSupplierComboBox()
         {
             using (SqlCommand command = new SqlCommand("SELECT SupplierID, Name FROM Supplier", MainForm.sqlConnection))
             {
@@ -115,7 +116,7 @@ namespace AutoPartsShop
                 SupplierComboBox.ValueMember = "SupplierID";
                 SupplierComboBox.DataSource = table;
             }
-            
+
         }
 
         public void LoadOrders1()
@@ -139,7 +140,7 @@ namespace AutoPartsShop
 
         private void editStatus_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void searchDetail_Click(object sender, EventArgs e)
@@ -161,7 +162,7 @@ namespace AutoPartsShop
                     selectDetail.Visible = true;
                 }
             }
-            else 
+            else
             {
                 string selectDetails = $"SELECT Detail.DetailID, Detail.Name FROM Detail JOIN " +
                     $"SupplierDetails ON Detail.DetailID = SupplierDetails.DetailID " +
@@ -234,7 +235,7 @@ namespace AutoPartsShop
                         DetailsComboBox.Enabled = true;
                     }
                 }
-                else 
+                else
                 {
 
                 }
@@ -262,6 +263,7 @@ namespace AutoPartsShop
             selectDetails_with_Supllier((int)SupplierComboBox.SelectedValue);
             ItemsRemove.Add(DetailsComboBox.SelectedValue);
             DetailsComboBox.Items.Remove(DetailsComboBox.SelectedValue);
+            AddOrder.Visible = true;
         }
 
         private void selectDetails_with_Supllier(int supplier)

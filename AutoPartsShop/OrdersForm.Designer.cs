@@ -44,9 +44,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.back = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.orderDataGrid = new System.Windows.Forms.DataGridView();
+            this.back = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -211,6 +211,7 @@
             this.AddOrder.TabIndex = 26;
             this.AddOrder.Text = "Создать заявку";
             this.AddOrder.UseVisualStyleBackColor = false;
+            this.AddOrder.Visible = false;
             this.AddOrder.Click += new System.EventHandler(this.AddOrder_Click);
             // 
             // label2
@@ -245,17 +246,6 @@
             this.tabPage2.Text = "Просмотр";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // back
-            // 
-            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.back.Location = new System.Drawing.Point(12, 6);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(230, 40);
-            this.back.TabIndex = 10;
-            this.back.Text = "Главная";
-            this.back.UseVisualStyleBackColor = true;
-            this.back.Click += new System.EventHandler(this.back_Click);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -280,6 +270,17 @@
             this.orderDataGrid.Name = "orderDataGrid";
             this.orderDataGrid.Size = new System.Drawing.Size(1252, 520);
             this.orderDataGrid.TabIndex = 2;
+            // 
+            // back
+            // 
+            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.back.Location = new System.Drawing.Point(12, 6);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(230, 40);
+            this.back.TabIndex = 10;
+            this.back.Text = "Главная";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // OrdersForm
             // 

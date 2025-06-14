@@ -69,7 +69,9 @@ namespace AutoPartsShop
 
         private void button_DefectsForm_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("В разработке!");
+            DefectsForm.MainForm = this; // Устанавливаем свойство
+            DefectsForm.Show();
+            this.Hide();
         }
 
         private void button_RequestForm_Click(object sender, EventArgs e)
